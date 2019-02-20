@@ -1,0 +1,58 @@
+@import "./flexboxgrid.min.scss";
+@import "./normalize.scss";
+
+$horizontal-gutter: 2%;
+$vertical-gutter: 1%;
+
+body {
+  background-color: #ffffe0;
+}
+
+.content{
+
+  background-color: red;
+}
+.nav {
+  line-height: 1.5rem;
+}
+
+.nav-item {
+  min-height: 1.5rem;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.nav-login {
+  order: -1;
+}
+
+.nav-item-spacer {
+  display: none;
+}
+
+@media only screen and (min-width: 64em) {
+  .nav-item-spacer {
+    display: block;
+  }
+
+  .nav-login {
+    order: 1;
+  }
+}
+
+.input-search {
+  width: 100%;
+}
+
+.box-row {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 1rem;
+  margin-bottom: 0;
+  background: #007fff;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+}
