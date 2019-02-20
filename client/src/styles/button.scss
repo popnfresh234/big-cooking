@@ -1,0 +1,26 @@
+$button-padding: 0.33rem;
+$button-bg-color: #b1d8b9;
+$button-hober-color: #f48f29;
+
+button {
+  -o-transition: $transition-time;
+  -ms-transition: $transition-time;
+  -moz-transition: $transition-time;
+  -webkit-transition: $transition-time;
+  transition: 0.5s;
+  border: 1px solid $main-bg-color;
+  border-radius: $ui-element-radius;
+  padding: $button-padding;
+}
+
+button {
+  background: #b1d8b9;
+}
+
+button:focus {
+  background: #b1d8b9;
+}
+
+button:hover {
+  background: #f48f29;
+}

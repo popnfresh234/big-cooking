@@ -1,15 +1,23 @@
 @import "./flexboxgrid.min.scss";
 @import "./normalize.scss";
-
-$horizontal-gutter: 2%;
-$vertical-gutter: 1%;
+@import "./variables.scss";
+@import "./button.scss";
 
 body {
-  background-color: #ffffe0;
+  background-color: $main-bg-color;
+  text-align: center;
+}
+
+// div {
+//   border: 0.5px solid red;
+// }
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
 }
 
 .content{
-
   background-color: red;
 }
 .nav {
@@ -56,3 +64,9 @@ body {
   text-align: center;
   color: #fff;
 }
+
+.padded-segment {
+  padding: 2rem;
+}
+
+@import './login.scss';

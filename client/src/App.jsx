@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
+import Recipes from './components/Recipes.jsx';
+import RecipeDetails from './components/RecipeDetails.jsx';
+import Register from './components/Register.jsx';
+import Login from './components/Login.jsx';
+import NewRecipe from './components/NewRecipe.jsx';
 
 class App extends Component {
   constructor( props ) {
@@ -10,8 +15,10 @@ class App extends Component {
       isLoggedIn: '',
       userId: '',
       userName: '',
+      loading: false,
     };
-    this.handleAuthState.bind( this );
+    this.handleAuthState = this.handleAuthState.bind( this );
+    this.handleLoading = this.handleLoading.bind( this );
   }
 
   handleAuthState( isLoggedIn, userId, userName ) {
@@ -19,6 +26,14 @@ class App extends Component {
     localStorage.setItem( 'isLoggedIn', JSON.stringify( isLoggedIn ) );
     localStorage.setItem( 'userId', JSON.stringify( userId ) );
     localStorage.setItem( 'userName', userName );
+  }
+
+  handleLoading() {
+    if ( this.state.loading === true ) {
+      this.setState( { loading: false } );
+    } else {
+      this.setState( { loading: true } );
+    }
   }
 
   render() {

@@ -1,0 +1,35 @@
+.login-container {
+    margin: $vertical-gutter auto;
+    display: inline-block;
+}
+
+.login-details {
+    border-radius: $segment-radius;
+    background-color: $login-color;
+}
+
+.login-details input {
+    border: 1px solid $main-bg-color;
+    border-radius: $ui-element-radius;
+    padding: 0.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.login-details label {
+    color: white;
+    display: block;
+    text-align: left;
+    margin-top: $input-margin
+}
+
+.login-details label > span{
+	font-weight: bold;
+}
+.login-details span.required{
+	color:red;
+}
+
+.login-details button {
+    margin-top: $input-margin;
+}
