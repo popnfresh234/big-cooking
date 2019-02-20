@@ -1,0 +1,27 @@
+{
+  "name": "recipe_app_new_client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon bin/www"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.406.0",
+    "bcrypt": "^3.0.4",
+    "cookie-parser": "^1.4.4",
+    "cookie-session": "^2.0.0-beta.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.1-alpha.3",
+    "knex": "^0.16.3",
+    "morgan": "^1.9.1",
+    "pg": "^7.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
