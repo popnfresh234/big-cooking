@@ -45,7 +45,7 @@ class App extends Component {
           handleLoading={this.handleLoading}
         />
         <Switch>
-          <PrivateRoute
+          <Route
             path="/"
             exact
             isLoggedIn={this.state.isLoggedIn}
@@ -55,7 +55,7 @@ class App extends Component {
             userId={this.state.userId}
             component={Recipes}
           />
-          <PrivateRoute
+          <Route
             path="/recipes"
             exact
             isLoggedIn={this.state.isLoggedIn}
