@@ -1,7 +1,9 @@
+$input-color: $grey-darker;
+
 .form-container {
-    margin: $vertical-gutter auto;
-    max-width: 95vw;
-  }
+  margin: $vertical-gutter auto;
+  max-width: 95vw;
+}
 
 @media only screen and (min-width: 64em) {
   .form-container {
@@ -14,9 +16,10 @@
   background-color: $login-color;
 }
 
-.form-details input {
+input {
   margin-top: $input-margin-top;
-  color: black;
+  border: 1px solid $grey-light;
+  color: $input-color;
   width: 100%;
 }
 
@@ -49,6 +52,6 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: black;
+  -webkit-text-fill-color: $input-color;
   transition: background-color 5000s ease-in-out 0s;
 }

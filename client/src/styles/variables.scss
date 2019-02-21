@@ -1,6 +1,15 @@
 $button-transition-time: 0.2s;
 $link-transition-time: 0.2s;
 
+
+$grey-darker:  hsl(0, 0%, 21%) !default;
+$grey-dark:    hsl(0, 0%, 29%) !default;
+$grey:         hsl(0, 0%, 48%) !default;
+$grey-light:   hsl(0, 0%, 71%) !default;
+$grey-lighter: hsl(0, 0%, 86%) !default;
+$orange-theme: #f48f29;
+
+
 $horizontal-gutter: 2%;
 $vertical-gutter: 1%;
 $login-color: #303036;
@@ -11,8 +20,4 @@ $ui-element-radius: 0.1rem;
 $input-padding: 0.5rem;
 $input-margin-top: 0.1rem;
 $nav-item-padding: 0.5rem;
-
-$link-color: black;
-$link-active-color: #f48f29;
-$link-hover-color: $link-active-color;
 $link-transition-time: 0.2s;
