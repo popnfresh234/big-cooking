@@ -51,16 +51,16 @@ class Login extends Component {
                 <input placeholder="Email" name="email" type="email" onChange={this.onChange} required />
               </label>
             </div>
-            <div className="form-input">
 
+            <div className="form-input">
               <label htmlFor="password">
                 <span>Password <span className="required">*</span></span>
                 <input placeholder="Password" name="password" type="password" onChange={this.onChange} required />
               </label>
             </div>
-            <div>
-              <button type="submit">Sign in!</button>
-            </div>
+
+            <button type="submit">Sign in!</button>
+
           </form>
         </Segment>
       </div>

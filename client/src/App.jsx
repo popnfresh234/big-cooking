@@ -39,7 +39,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar
+          isLoggedIn={this.state.isLoggedIn}
+          handleAuthState={this.handleAuthState}
+          handleLoading={this.handleLoading}
+        />
         <Switch>
           <PrivateRoute
             path="/"
