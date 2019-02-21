@@ -1,4 +1,6 @@
-$transition-time: 1s;
+$button-transition-time: 0.2s;
+$link-transition-time: 0.2s;
+
 $horizontal-gutter: 2%;
 $vertical-gutter: 1%;
 $login-color: #303036;
@@ -9,3 +11,8 @@ $ui-element-radius: 0.1rem;
 $input-padding: 0.5rem;
 $input-margin-top: 0.1rem;
 $nav-item-padding: 0.5rem;
+
+$link-color: black;
+$link-active-color: #f48f29;
+$link-hover-color: $link-active-color;
+$link-transition-time: 0.2s;

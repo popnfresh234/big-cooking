@@ -1,0 +1,20 @@
+.navlink-active {
+  color: $link-active-color;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color:$link-hover-color;
+}
+
+a {
+    -o-transition: $link-transition-time;
+    -ms-transition: $link-transition-time;
+    -moz-transition: $link-transition-time;
+    -webkit-transition: $link-transition-time;
+    transition: $link-transition-time;
+  }
