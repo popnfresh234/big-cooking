@@ -1,6 +1,7 @@
 /* eslint class-methods-use-this: 0 */ // --> OFF
 import axios from 'axios';
 import React, { Component } from 'react';
+import Segment from './Segment.jsx';
 
 class Login extends Component {
   constructor( props ) {
@@ -38,30 +39,30 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="login-container">
+      <div className="form-container">
         <h1 className="login-h1">BIG COOKIN' </h1>
-        <h1>Sharing recipes for a better world</h1>
-        <div className="login-details padded-segment" >
+        <h4>Sharing recipes for a better world</h4>
+        <Segment padded="very" className="form-details" >
           <form onSubmit={this.onSubmit}>
             {this.state.error && <p>{this.state.error}</p>}
-            <div className="login-input">
+            <div className="form-input">
               <label htmlFor="email">
                 <span>Email <span className="required">*</span></span>
                 <input placeholder="Email" name="email" type="email" onChange={this.onChange} required />
               </label>
             </div>
-            <div className="login-input">
+            <div className="form-input">
 
               <label htmlFor="password">
                 <span>Password <span className="required">*</span></span>
                 <input placeholder="Password" name="password" type="password" onChange={this.onChange} required />
               </label>
             </div>
-            <div className="login-button-div">
+            <div>
               <button type="submit">Sign in!</button>
             </div>
           </form>
-        </div>
+        </Segment>
       </div>
     );
   }

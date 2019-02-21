@@ -2,15 +2,26 @@
 @import "./normalize.scss";
 @import "./variables.scss";
 @import "./button.scss";
+@import "./nav.scss";
 
 body {
   background-color: $main-bg-color;
   text-align: center;
 }
 
-// div {
-//   border: 0.5px solid red;
-// }
+div {
+  display: block;
+  // border: 0.5px solid red;
+}
+
+input {
+  border: 1px solid $main-bg-color;
+  border-radius: $ui-element-radius;
+  display:block;
+  padding: $input-padding;
+  text-align: left;
+  box-sizing: border-box;
+}
 
 :focus {
   outline-color: transparent;
@@ -20,23 +31,7 @@ body {
 .content{
   background-color: red;
 }
-.nav {
-  line-height: 1.5rem;
-}
 
-.nav-item {
-  min-height: 1.5rem;
-  border: 1px solid black;
-  text-align: center;
-}
-
-.nav-login {
-  order: -1;
-}
-
-.nav-item-spacer {
-  display: none;
-}
 
 @media only screen and (min-width: 64em) {
   .nav-item-spacer {
@@ -65,8 +60,12 @@ body {
   color: #fff;
 }
 
-.padded-segment {
+.padded {
+  padding: 1rem;
+}
+
+.padded-very {
   padding: 2rem;
 }
 
-@import './login.scss';
+@import './form.scss';

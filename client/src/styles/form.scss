@@ -1,0 +1,36 @@
+.form-container {
+    margin: $vertical-gutter auto;
+    max-width: 33vw;
+}
+
+.form-details {
+    border-radius: $segment-radius;
+    background-color: $login-color;
+}
+
+.form-details input {
+    color: black;
+    width: 100%;
+}
+
+.form-details label {
+    color: white;
+    display: block;
+    text-align: left;
+    margin-top: $input-margin
+}
+
+.form-details label > span{
+	font-weight: bold;
+}
+.form-details span.required{
+	color:red;
+}
+
+.form-details button {
+    margin-top: $input-margin;
+}
+
+.form-details p {
+    color: white;
+}
