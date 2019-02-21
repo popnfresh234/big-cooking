@@ -47,8 +47,8 @@ class Login extends Component {
             {this.state.error && <p>{this.state.error}</p>}
             <div className="form-input">
               <label htmlFor="email">
-                <span>Email <span className="required">*</span></span>
-                <input placeholder="Email" name="email" type="email" onChange={this.onChange} required />
+                <span>E-mail <span className="required">*</span></span>
+                <input placeholder="E-mail" name="email" type="email" onChange={this.onChange} required />
               </label>
             </div>
 
