@@ -59,22 +59,26 @@ class App extends Component {
           <Route
             path="/"
             exact
-            isLoggedIn={this.state.isLoggedIn}
-            rootPath="random"
-            key="random"
-            cardsPerRow={3}
-            userId={this.state.userId}
-            component={Recipes}
+            render={props => ( <Recipes
+              {...props}
+              isLoggedIn={this.state.isLoggedIn}
+              rootPath="random"
+              key="random"
+              cardsPerRow={12 / 3}
+              userId={this.state.userId}
+            /> )}
           />
           <Route
             path="/recipes"
             exact
-            isLoggedIn={this.state.isLoggedIn}
-            rootPath="recipes"
-            key="recipes"
-            cardsPerRow={4}
-            handleLoading={this.handleLoading}
-            component={Recipes}
+            render={props => ( <Recipes
+              {...props}
+              isLoggedIn={this.state.isLoggedIn}
+              rootPath="recipes"
+              key="recipes"
+              cardsPerRow={12 / 4}
+              handleLoading={this.handleLoading}
+            /> )}
           />
           <PrivateRoute
             path="/myrecipes"

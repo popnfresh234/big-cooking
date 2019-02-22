@@ -129,7 +129,7 @@ function handleRecipe( req, res, fn ) {
 //* ** Get all recipes
 //* ********************************************
 
-router.get( '/', verifyUser, ( req, res, next ) => {
+router.get( '/', ( req, res, next ) => {
   knex.select()
     .from( 'recipes' )
     .then( ( result ) => {
@@ -146,7 +146,7 @@ router.get( '/', verifyUser, ( req, res, next ) => {
 //* ** Get all recipes
 //* ********************************************
 
-router.get( '/random', verifyUser, ( req, res, next ) => {
+router.get( '/random', ( req, res, next ) => {
   knex.select()
     .from( 'recipes' )
     .orderByRaw( 'RANDOM()' )
@@ -168,7 +168,7 @@ router.get( '/random', verifyUser, ( req, res, next ) => {
 //* ** Favorite or Unfavorite a recipe
 //* ********************************************
 
-router.get( '/search', verifyUser, ( req, res, next ) => {
+router.get( '/search', ( req, res, next ) => {
   console.log( req.query.q );
   const query = req.query.q;
   knex.select()
@@ -189,7 +189,7 @@ router.get( '/search', verifyUser, ( req, res, next ) => {
 //* ** Get a specific recipe
 //* ********************************************
 
-router.get( '/:recipe_id', verifyUser, ( req, res, next ) => {
+router.get( '/:recipe_id', ( req, res, next ) => {
   let recipe = null;
   knex.select()
     .from( 'recipes' )
