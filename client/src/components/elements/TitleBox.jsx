@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Spacer from './Spacer.jsx';
 
 class TitleBox extends Component {
   render() {

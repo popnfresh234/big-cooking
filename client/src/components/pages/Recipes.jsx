@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import RecipeOverview from './RecipeCard.jsx';
-import TitleBox from './TitleBox.jsx';
-import Spacer from './Spacer.jsx';
+import RecipeCard from '../elements/RecipeCard.jsx';
+import TitleBox from '../elements/TitleBox.jsx';
+import Spacer from '../elements/Spacer.jsx';
 
 class Recipes extends Component {
   constructor( props ) {
@@ -33,7 +33,7 @@ class Recipes extends Component {
       axios.get( fn() )
         .then( ( baseRecipeResponse ) => {
           if ( baseRecipeResponse.data ) {
-            const recipes = baseRecipeResponse.data.map( recipe => <div key={recipe.id} className={`col-xs-12 col-md-${this.props.cardsPerRow}`}><RecipeOverview recipe={recipe} /></div> );
+            const recipes = baseRecipeResponse.data.map( recipe => <div key={recipe.id} className={`col-xs-12 col-md-${this.props.cardsPerRow}`}><RecipeCard recipe={recipe} /></div> );
             this.setState( {
               recipes,
             } );

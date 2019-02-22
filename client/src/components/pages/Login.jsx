@@ -1,9 +1,9 @@
 /* eslint class-methods-use-this: 0 */ // --> OFF
 import axios from 'axios';
 import React, { Component } from 'react';
-import Segment from './Segment.jsx';
-import TitleBox from './TitleBox.jsx';
-import Spacer from './Spacer.jsx';
+import Segment from '../elements/Segment.jsx';
+import TitleBox from '../elements/TitleBox.jsx';
+import Spacer from '../elements/Spacer.jsx';
 
 class Login extends Component {
   constructor( props ) {

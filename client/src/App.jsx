@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar.jsx';
-import PrivateRoute from './components/PrivateRoute.jsx';
-import Recipes from './components/Recipes.jsx';
-import RecipeDetails from './components/RecipeDetails.jsx';
-import Register from './components/Register.jsx';
-import Login from './components/Login.jsx';
-import NewRecipe from './components/NewRecipe.jsx';
+import Navbar from './components/elements/Navbar.jsx';
+import PrivateRoute from './components/elements/PrivateRoute.jsx';
+import Recipes from './components/pages/Recipes.jsx';
+import RecipeDetails from './components/pages/RecipeDetails.jsx';
+import Register from './components/pages/Register.jsx';
+import Login from './components/pages/Login.jsx';
+import NewRecipe from './components/pages/NewRecipe.jsx';
 
 class App extends Component {
   constructor( props ) {
