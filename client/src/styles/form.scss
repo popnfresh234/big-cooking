@@ -1,4 +1,9 @@
 $input-color: $grey-darker;
+$input-radius: $radius-s;
+$input-margin-top: $margin-xxs;
+$input-padding: $padding-s;
+$label-margin-top: $margin-m;
+$button-margin-top: $margin-m;
 
 .form-container {
   margin: $vertical-gutter auto;
@@ -14,7 +19,7 @@ $input-color: $grey-darker;
 input {
   margin-top: $input-margin-top;
   border: 1px solid $border-color;
-  border-radius: $ui-element-radius;
+  border-radius: $input-radius;
   color: $input-color;
   width: 100%;
   display: block;
@@ -25,7 +30,7 @@ input {
 label {
   display: block;
   text-align: left;
-  margin-top: $input-margin;
+  margin-top: $label-margin-top;
 }
 
 label > span {
@@ -36,7 +41,7 @@ span.required {
 }
 
 form button {
-  margin-top: $input-margin;
+  margin-top: $button-margin-top;
 }
 
 input:-webkit-autofill,

@@ -1,0 +1,35 @@
+$card-margin-bottom: $margin-l;
+$h6-padding-top: $padding-s;
+$h6-padding-bottom: $padding-s;
+
+.recipe-card{
+    max-width: 300px;
+    margin-bottom: $card-margin-bottom;
+    border-radius: $radius-md;
+    border: 1px solid $grey-lighter;
+    display: inline-block;
+}
+
+.recipe-card h1, h2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+.recipe-details {
+    padding: 1rem;
+}
+
+.recipe-details h6{
+    padding: $h6-padding-top 0 $h6-padding-bottom 0;
+    text-align: left;
+}
+
+.recipe-details .row {
+    padding: $padding-m 0 $padding-m 0;
+    border-top: 1px solid $theme-green;
+    border-bottom: 1px solid $theme-green;
+}
+
+.recipe-clock-icon{
+    color: $grey-light;
+}

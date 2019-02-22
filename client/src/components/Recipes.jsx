@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import RecipeOverview from './RecipeOverview.jsx';
+import RecipeOverview from './RecipeCard.jsx';
 
 
 class Recipes extends Component {
@@ -45,8 +45,10 @@ class Recipes extends Component {
 
   render() {
     return (
-      <div className="row">
-        {this.state.recipes}
+      <div className="recipe-container">
+        <div className="row">
+          {this.state.recipes}
+        </div>
       </div>
     );
   }

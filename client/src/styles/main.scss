@@ -6,19 +6,26 @@
 @import "./navlink.scss";
 @import "./segment.scss";
 @import './form.scss';
-
-
+@import './recipe-card.scss';
+@import './recipes.scss';
+@import './header.scss';
 body {
-  background-color: $bg-color;
+  color: $grey-darker;
   text-align: center;
+}
+
+.content {
+  min-height: 100vh;
+  background-color:$bg-color;
 }
 
 div {
   display: block;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
   // border: 0.5px solid red;
 }
-
-
 
 :focus {
   outline-color: transparent;

@@ -2,26 +2,43 @@ $default-transition-time: 0.2s;
 $button-transition-time: $default-transition-time;
 $link-transition-time: $default-transition-time;
 
-
-$grey-darker:  hsl(0, 0%, 21%) !default;
-$grey-dark:    hsl(0, 0%, 29%) !default;
-$grey:         hsl(0, 0%, 48%) !default;
-$grey-light:   hsl(0, 0%, 71%) !default;
+$grey-darker: hsl(0, 0%, 21%) !default;
+$grey-dark: hsl(0, 0%, 29%) !default;
+$grey: hsl(0, 0%, 48%) !default;
+$grey-light: hsl(0, 0%, 71%) !default;
 $grey-lighter: hsl(0, 0%, 86%) !default;
-$white:        hsl(0,0,100%);
-$red:          hsl(356, 94%, 53%);
-$orange-theme: #f48f29;
-$green-theme:  #b1d8b9;
-$bg-color:     #ffffe0;
-
+$white: hsl(0, 0, 100%);
+$red: hsl(356, 94%, 53%);
+$theme-orange: #f48f29;
+$theme-green: #b1d8b9;
+$bg-color: #ffffe0;
 $horizontal-gutter: 2%;
 $vertical-gutter: 1%;
+$margin-horizontal: 5%;
+$margin-vertical: 2%;
+$padding-horizontal: 2%;
+$padding-vertical: 5%;
 $login-color: $grey-darker;
 $border-color: $grey-light;
-$input-margin: 1rem;
-$segment-radius: 0.33rem;
-$ui-element-radius: 0.1rem;
-$input-padding: 0.5rem;
-$input-margin-top: 0.1rem;
-$nav-item-padding: 0.5rem;
-$link-transition-time: 0.2s;
+
+$margin-l: 2rem;
+$margin-m: 1rem;
+$margin-s: 0.5rem;
+$margin-xs: 0.33rem;
+$margin-xxs: 0.1rem;
+
+$radius-md: 0.33rem;
+$radius-s: 0.1rem;
+
+$padding-l: 2rem;
+$padding-m: 1rem;
+$padding-s: 0.5rem;
+$padding-xs: 0.33rem;
+$padding-xxs: 0.1rem;
+
+$font-xl: 2rem;
+$font-l: 1.66rem;
+$font-m: 1.5rem;
+$font-s: 1.33rem;
+$font-xs: 1.25rem;
+$font-xxs: 1rem;

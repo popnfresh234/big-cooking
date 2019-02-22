@@ -49,7 +49,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="content">
         <Navbar
           isLoggedIn={this.state.isLoggedIn}
           handleAuthState={this.handleAuthState}
