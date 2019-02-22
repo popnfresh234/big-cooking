@@ -7,10 +7,10 @@
 @import "./segment.scss";
 @import './form.scss';
 @import './recipe-card.scss';
-@import './recipes.scss';
 @import './header.scss';
 @import './spacer';
 @import './titlebox.scss';
+@import './recipe-details.scss';
 
 @font-face {
   font-family:"Bell";
@@ -33,12 +33,12 @@ body {
 
 div {
   display: block;
-  white-space: nowrap; 
-  overflow: hidden;
-  text-overflow: ellipsis;
   // border: 0.5px solid red;
 }
 
+.left-align {
+  text-align: left;
+}
 :focus {
   outline-color: transparent;
   outline-style: none;

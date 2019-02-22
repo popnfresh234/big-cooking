@@ -3,6 +3,7 @@ import axios from 'axios';
 import RecipeCard from '../elements/RecipeCard.jsx';
 import TitleBox from '../elements/TitleBox.jsx';
 import Spacer from '../elements/Spacer.jsx';
+import Segment from '../elements/Segment.jsx';
 
 class Recipes extends Component {
   constructor( props ) {
@@ -46,13 +47,13 @@ class Recipes extends Component {
 
   render() {
     return (
-      <div className="recipe-container">
+      <Segment type="main-container">
         <TitleBox />
         <Spacer size="l" />
         <div className="row">
           {this.state.recipes}
         </div>
-      </div>
+      </Segment>
     );
   }
 }

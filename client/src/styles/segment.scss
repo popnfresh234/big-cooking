@@ -1,18 +1,38 @@
 $segment-radius: $radius-md;
 
+$container-color: $white;
+$container-margin-horizontal:  $margin-horizontal;
+$container-margin-vertical: $margin-vertical;
+$container-padding-vertical: $padding-vertical;
+
 .segment {
   border-radius: $segment-radius;
 }
 
-.padded {
-  padding: 1rem;
+.padded-none{
+  padding:0rem !important;
+}
+
+.padded-small {
+  padding: 1rem !important;
 }
 
 .padded-very {
-  padding: 2rem;
+  padding: 2rem !important;
 }
 
 .grey-darker{
   background: $grey-darker;
   color: $white;
+}
+
+.grey-lighter{
+  background: $grey-lighter
+}
+
+.main-container {
+  border: 1px solid $grey-lighter;
+  margin: $container-margin-vertical $container-margin-horizontal  0 $container-margin-horizontal;
+  padding: $container-padding-vertical;
+  background-color: $container-color;
 }

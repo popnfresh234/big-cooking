@@ -1,29 +1,60 @@
 .spacer {
-    margin-top: $margin-m;
-    margin-bottom: $margin-m;
+  margin-top: $margin-m;
+  margin-bottom: $margin-m;
+}
+
+.size-xl {
+  margin-top: $margin-xl;
+  margin-bottom: $margin-xl;
 }
 
 .size-l {
-    margin-top: $margin-l;
-    margin-bottom: $margin-l;
+  margin-top: $margin-l;
+  margin-bottom: $margin-l;
 }
 
 .size-m {
-    margin-top: $margin-m;
-    margin-bottom: $margin-m;
+  margin-top: $margin-m;
+  margin-bottom: $margin-m;
 }
 
 .size-s {
-    margin-top: $margin-s;
-    margin-bottom: $margin-s;
+  margin-top: $margin-s;
+  margin-bottom: $margin-s;
 }
 
-.spacer-xs {
-    margin-top: $margin-xs;
-    margin-bottom: $margin-xs;
+.size-xs {
+  margin-top: $margin-xs;
+  margin-bottom: $margin-xs;
 }
 
-.spacer-xxs {
-    margin-top: $margin-xxs;
-    margin-bottom: $margin-xxs;
+.size-xxs {
+  margin-top: $margin-xxs;
+  margin-bottom: $margin-xxs;
+}
+
+.size-tiny {
+  margin-top: $margin-tiny;
+  margin-bottom: $margin-tiny;
+}
+
+.size-mobile-m {
+  margin-top: $margin-m;
+  margin-bottom: $margin-m;
+}
+
+.size-mobile-s {
+  margin-top: $margin-s;
+  margin-bottom: $margin-s;
+}
+
+@media only screen and (min-width: 64em) {
+  .size-mobile-m {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .size-mobile-s {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

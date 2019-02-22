@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import Ingredient from '../elements/Ingredient.jsx';
+import Direction from '../elements/Direction.jsx';
+import TitleBox from '../elements/TitleBox.jsx';
+import Spacer from '../elements/Spacer.jsx';
+import Segment from '../elements/Segment.jsx';
 
 class RecipeDetails extends Component {
   constructor( props ) {
@@ -17,6 +21,7 @@ class RecipeDetails extends Component {
     this.props.handleLoading();
     axios.get( `/api/recipes/${this.props.computedMatch.params.id}` )
       .then( ( result ) => {
+        console.log( result );
         this.props.handleLoading();
         const ingredients = this.calcIngredients( result.data.ingredients, 1 );
 
@@ -73,7 +78,50 @@ class RecipeDetails extends Component {
 
   render() {
     return (
-      <h1>recipe details</h1>
+      <div>
+        <Spacer size="l" />
+        <TitleBox />
+        <Segment padded="small" type="main-container">
+          <div className="row">
+            <div className="col-xs-12 col-md-2"><img className="img-recipe-detail" src={this.state.recipe.image_url} alt={this.state.recipe.name} /></div>
+            <div className="col-xs">
+              <Spacer size="mobile-m" />
+              <div className="row left-align">
+                <div className="col-xs-12"><h2>{this.state.recipe.name ? this.state.recipe.name.toUpperCase() : ''}</h2></div>
+              </div>
+              <Spacer size="s" />
+              <div className="row left-align">
+                <div className="col-xs-6 col-md-1">Author: </div><div className="col-xs-6 col-md-11">{this.state.recipe.author}</div>
+              </div>
+              <Spacer size="xs" />
+
+              <div className="row left-align">
+                <div className="col-xs-6 col-md-1">Description: </div><div className="col-xs-6 col-md-11">{this.state.recipe.description}</div>
+              </div>
+              <Spacer size="xs" />
+
+              <div className="row left-align">
+                <div className="col-xs-6 col-md-1">Duration: </div><div className="col-xs-6 col-md-11"><i className="recipe-clock-icon far fa-clock" /> {this.state.recipe.duration} minutes</div>
+              </div>
+              <Spacer size="xs" />
+
+              <div className="row left-align">
+                <div className="col-xs-6 col-md-1">Notes: </div><div className="col-xs-6 col-md-11">{this.state.recipe.note}</div>
+              </div>
+            </div>
+          </div>
+        </Segment>
+        <Spacer size="m" />
+
+        <Segment padded="none" type="main-container">
+        Ingredients
+        </Segment>
+        <Spacer size="m" />
+
+        <Segment padded="none" type="main-container">
+        Directions
+        </Segment>
+      </div >
     );
   }
 }

@@ -6,9 +6,14 @@ class Segment extends Component {
   }
 
   render() {
-    const modifier = this.props.padded && `-${this.props.padded}`;
     return (
-      <div className={`segment padded${this.props.padded ? `-${this.props.padded}` : ''} ${this.props.color} ${this.props.className}`}>
+      <div className={
+        `segment 
+        ${this.props.color ? this.props.color : ''} 
+        ${this.props.className ? this.props.className : ''} 
+        ${this.props.type} ${this.props.padded ? `padded-${this.props.padded}` : ''}`
+        }
+      >
         {this.props.children}
       </div>
     );

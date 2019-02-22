@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 class RecipeOverview extends Component {
   render() {
-    console.log( this.props.recipe );
     return (
       <div className="recipe-card">
         <NavLink to={`/recipe-details/${this.props.recipe.id}`}>
