@@ -4,9 +4,12 @@
 @import "./button.scss";
 @import "./nav-bar.scss";
 @import "./navlink.scss";
+@import "./segment.scss";
+@import './form.scss';
+
 
 body {
-  background-color: $main-bg-color;
+  background-color: $bg-color;
   text-align: center;
 }
 
@@ -15,24 +18,12 @@ div {
   // border: 0.5px solid red;
 }
 
-input {
-  border: 1px solid $main-bg-color;
-  border-radius: $ui-element-radius;
-  display:block;
-  padding: $input-padding;
-  text-align: left;
-  box-sizing: border-box;
-}
+
 
 :focus {
   outline-color: transparent;
   outline-style: none;
 }
-
-.content{
-  background-color: red;
-}
-
 
 @media only screen and (min-width: 64em) {
   .nav-item-spacer {
@@ -44,29 +35,4 @@ input {
   }
 }
 
-.input-search {
-  width: 100%;
-}
 
-.box-row {
-  position: relative;
-  box-sizing: border-box;
-  min-height: 1rem;
-  margin-bottom: 0;
-  background: #007fff;
-  border: 1px solid #fff;
-  border-radius: 2px;
-  overflow: hidden;
-  text-align: center;
-  color: #fff;
-}
-
-.padded {
-  padding: 1rem;
-}
-
-.padded-very {
-  padding: 2rem;
-}
-
-@import './form.scss';

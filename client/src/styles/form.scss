@@ -11,38 +11,32 @@ $input-color: $grey-darker;
   }
 }
 
-.form-details {
-  border-radius: $segment-radius;
-  background-color: $login-color;
-}
-
 input {
   margin-top: $input-margin-top;
-  border: 1px solid $grey-light;
+  border: 1px solid $border-color;
+  border-radius: $ui-element-radius;
   color: $input-color;
   width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: $input-padding;
 }
 
-.form-details label {
-  color: white;
+label {
   display: block;
   text-align: left;
   margin-top: $input-margin;
 }
 
-.form-details label > span {
+label > span {
   font-weight: bold;
 }
-.form-details span.required {
-  color: red;
+span.required {
+  color: $red;
 }
 
-.form-details button {
+form button {
   margin-top: $input-margin;
-}
-
-.form-details p {
-  color: white;
 }
 
 input:-webkit-autofill,

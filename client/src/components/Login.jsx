@@ -42,7 +42,7 @@ class Login extends Component {
       <div className="form-container">
         <h1 className="login-h1">BIG COOKIN' </h1>
         <h4>Sharing recipes for a better world</h4>
-        <Segment padded="very" className="form-details" >
+        <Segment padded="very" color="grey-darker">
           <form onSubmit={this.onSubmit}>
             {this.state.error && <p>{this.state.error}</p>}
             <div className="form-input">

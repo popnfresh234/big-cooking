@@ -1,5 +1,6 @@
-$button-transition-time: 0.2s;
-$link-transition-time: 0.2s;
+$default-transition-time: 0.2s;
+$button-transition-time: $default-transition-time;
+$link-transition-time: $default-transition-time;
 
 
 $grey-darker:  hsl(0, 0%, 21%) !default;
@@ -7,15 +8,18 @@ $grey-dark:    hsl(0, 0%, 29%) !default;
 $grey:         hsl(0, 0%, 48%) !default;
 $grey-light:   hsl(0, 0%, 71%) !default;
 $grey-lighter: hsl(0, 0%, 86%) !default;
+$white:        hsl(0,0,100%);
+$red:          hsl(356, 94%, 53%);
 $orange-theme: #f48f29;
-
+$green-theme:  #b1d8b9;
+$bg-color:     #ffffe0;
 
 $horizontal-gutter: 2%;
 $vertical-gutter: 1%;
-$login-color: #303036;
-$main-bg-color: #ffffe0;
+$login-color: $grey-darker;
+$border-color: $grey-light;
 $input-margin: 1rem;
-$segment-radius: 0.5rem;
+$segment-radius: 0.33rem;
 $ui-element-radius: 0.1rem;
 $input-padding: 0.5rem;
 $input-margin-top: 0.1rem;

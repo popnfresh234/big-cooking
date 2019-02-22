@@ -1,26 +1,29 @@
 $button-padding: 0.33rem;
-$button-bg-color: #b1d8b9;
-$button-hober-color: #f48f29;
+$button-color: $grey-darker;
+$button-hover-color: $grey-lighter;
+$button-bg-color: $green-theme;
+$button-hover-bg-color: $orange-theme;
+
 
 button {
+  color: $button-color;
+  background: $button-bg-color;
+  border: 1px solid $border-color;
+  border-radius: $ui-element-radius;
+  padding: $button-padding;
   -o-transition: $button-transition-time;
   -ms-transition: $button-transition-time;
   -moz-transition: $button-transition-time;
   -webkit-transition: $button-transition-time;
   transition: $button-transition-time;
-  border: 1px solid $main-bg-color;
-  border-radius: $ui-element-radius;
-  padding: $button-padding;
-}
-
-button {
-  background: #b1d8b9;
 }
 
 button:focus {
-  background: #b1d8b9;
+  color: white;
+  background:$button-bg-color;
 }
 
 button:hover {
-  background: #f48f29;
+  color:$button-hover-color;
+  background: $button-hover-bg-color;
 }

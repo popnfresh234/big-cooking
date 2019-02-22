@@ -1,0 +1,16 @@
+.segment {
+  border-radius: $segment-radius;
+}
+
+.padded {
+  padding: 1rem;
+}
+
+.padded-very {
+  padding: 2rem;
+}
+
+.grey-darker{
+  background: $grey-darker;
+  color: $white;
+}

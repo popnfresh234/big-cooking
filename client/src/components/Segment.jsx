@@ -8,7 +8,7 @@ class Segment extends Component {
   render() {
     const modifier = this.props.padded && `-${this.props.padded}`;
     return (
-      <div className={`padded${this.props.padded ? `-${this.props.padded}` : ''} ${this.props.className}`}>
+      <div className={`segment padded${this.props.padded ? `-${this.props.padded}` : ''} ${this.props.color} ${this.props.className}`}>
         {this.props.children}
       </div>
     );
