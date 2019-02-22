@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import RecipeOverview from './RecipeCard.jsx';
-
+import TitleBox from './TitleBox.jsx';
+import Spacer from './Spacer.jsx';
 
 class Recipes extends Component {
   constructor( props ) {
@@ -46,6 +47,8 @@ class Recipes extends Component {
   render() {
     return (
       <div className="recipe-container">
+        <TitleBox />
+        <Spacer size="l" />
         <div className="row">
           {this.state.recipes}
         </div>

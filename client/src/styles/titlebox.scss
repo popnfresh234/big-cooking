@@ -1,0 +1,13 @@
+.title-header {
+  font-style: italic;
+}
+
+.title-sub-header {
+  font-style: italic;
+}
+
+@media only screen and (min-width: 64em) {
+  .title-header {
+    font-size: $font-xxl;
+  }
+}

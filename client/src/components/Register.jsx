@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Segment from './Segment.jsx';
+import TitleBox from './TitleBox.jsx';
+import Spacer from './Spacer.jsx';
+
 
 class Register extends Component {
   constructor( props ) {
@@ -45,8 +48,8 @@ class Register extends Component {
   render() {
     return (
       <div className="form-container">
-        <h1 className="login-h1">BIG COOKIN' </h1>
-        <h4>Sharing recipes for a better world</h4>
+        <TitleBox />
+        <Spacer size="s" />
         <Segment padded="very" color="grey-darker" >
           <form onSubmit={this.onSubmit}>
             {this.state.error && <p>{this.state.error}</p>}

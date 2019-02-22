@@ -9,6 +9,18 @@
 @import './recipe-card.scss';
 @import './recipes.scss';
 @import './header.scss';
+@import './spacer';
+@import './titlebox.scss';
+
+@font-face {
+  font-family:"Bell";
+  src: url("./fonts/BELL.ttf");
+}
+
+*:not(i){
+  font-family: "BellItalic";
+}
+
 body {
   color: $grey-darker;
   text-align: center;
