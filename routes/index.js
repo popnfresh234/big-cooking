@@ -10,6 +10,14 @@ require( 'dotenv' ).config();
 
 const router = express.Router();
 
+router.get( '/login/check', ( req, res, next ) => {
+  if ( req.session.user ) {
+    res.status( 200 ).json( req.session.user );
+  } else {
+    res.status( 204 ).send( 'Not logged in' );
+  }
+} );
+
 //* ********************************************
 //* ** GET /api/:user_id/recipes ***
 //* ** Get all recipes belonging to a user
@@ -61,6 +69,7 @@ router.post( '/register', ( req, res, next ) => {
         password: hashedPassword,
       };
       req.session.id = id[0];
+      req.session.user = newUser;
       res.status( 201 ).json( newUser );
     } )
     .catch( ( err ) => {
@@ -96,6 +105,7 @@ router.post( '/login', ( req, res, next ) => {
       return Promise.reject( new Error( 'Password incorrect' ) );
     } )
     .then( ( user ) => {
+      req.session.user = user;
       res.status( 200 ).json( user );
     } )
     .catch( ( err ) => {

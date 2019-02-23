@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import axios from 'axios';
+
 import Navbar from './components/elements/Navbar.jsx';
 import PrivateRoute from './components/elements/PrivateRoute.jsx';
 import Recipes from './components/pages/Recipes.jsx';
@@ -22,14 +24,25 @@ class App extends Component {
   }
 
   componentWillMount() {
-    const isLoggedIn = JSON.parse( localStorage.getItem( 'isLoggedIn' ) );
-    const userId = JSON.parse( localStorage.getItem( 'userId' ) );
-    const userName = localStorage.getItem( 'userName' );
-    this.setState( {
-      isLoggedIn,
-      userId,
-      userName,
-    } );
+    axios.get( '/api/login/check' )
+      .then( ( result ) => {
+        if ( result.status === 200 ) {
+          const isLoggedIn = JSON.parse( localStorage.getItem( 'isLoggedIn' ) );
+          const userId = JSON.parse( localStorage.getItem( 'userId' ) );
+          const userName = localStorage.getItem( 'userName' );
+          this.setState( {
+            isLoggedIn,
+            userId,
+            userName,
+          } );
+        } else {
+          this.setState( {
+            isLoggedIn: false,
+            userId: '',
+            userName: '',
+          } );
+        }
+      } );
   }
 
   handleAuthState( isLoggedIn, userId, userName ) {
