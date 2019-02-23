@@ -1,6 +1,31 @@
 @media only screen and (min-width: 64em) {
   .img-recipe-detail {
-    max-width: 150px;
-    max-height: 150px;
+    width: 100%;
   }
+
+  .left-margin{
+    margin-left: $margin-m;
+  }
+}
+
+.recipe-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.direction-item{
+  min-height: 2rem;
+}
+
+.underlined{
+  padding-bottom: $padding-s;
+  padding-top: $padding-s;
+  border-bottom:1px dashed black;
+}
+
+.underlined:first-child{
+  border-top: 1px dashed black;
 }

@@ -44,7 +44,7 @@ class Login extends Component {
       <div className="form-container">
         <TitleBox />
         <Spacer size="s" />
-        <Segment padded="very" color="grey-darker">
+        <Segment padded="l" color="grey-darker">
           <form onSubmit={this.onSubmit}>
             {this.state.error && <p>{this.state.error}</p>}
             <div className="form-input">

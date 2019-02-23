@@ -5,30 +5,39 @@
 @import "./nav-bar.scss";
 @import "./navlink.scss";
 @import "./segment.scss";
-@import './form.scss';
-@import './recipe-card.scss';
-@import './header.scss';
-@import './spacer';
-@import './titlebox.scss';
-@import './recipe-details.scss';
+@import "./form.scss";
+@import "./recipe-card.scss";
+@import "./header.scss";
+@import "./spacer";
+@import "./titlebox.scss";
+@import "./recipe-details.scss";
 
 @font-face {
-  font-family:"Bell";
+  font-family: "Bell";
   src: url("./fonts/BELL.ttf");
 }
 
-*:not(i){
+*:not(i) {
   font-family: "BellItalic";
 }
 
 body {
-  color: $grey-darker;
   text-align: center;
+}
+
+.col-xs-mini {
+  flex-basis: 4%;
+  max-width: 4%;
+}
+
+.col-md-mini{
+  flex-basis:4%;
+  max-width: 4%;
 }
 
 .content {
   min-height: 100vh;
-  background-color:$bg-color;
+  background-color: $bg-color;
 }
 
 div {
@@ -39,6 +48,11 @@ div {
 .left-align {
   text-align: left;
 }
+
+.right-align {
+  text-align: right;
+}
+
 :focus {
   outline-color: transparent;
   outline-style: none;
@@ -53,5 +67,3 @@ div {
     order: 1;
   }
 }
-
-

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Segment from '../elements/Segment.jsx';
 import TitleBox from '../elements/TitleBox.jsx';
 import Spacer from '../elements/Spacer.jsx';
-
+import axios from 'axios';
 
 class Register extends Component {
   constructor( props ) {
@@ -26,6 +26,8 @@ class Register extends Component {
 
   onSubmit( e ) {
     e.preventDefault();
+    console.log( this.state );
+    console.log( this.state.password, this.state.confirmPassword );
     if ( this.state.password !== this.state.confirmPassword ) {
       this.setState( { error: 'Your passwords don\'t match, please try again.' } );
     } else {
@@ -50,7 +52,7 @@ class Register extends Component {
       <div className="form-container">
         <TitleBox />
         <Spacer size="s" />
-        <Segment padded="very" color="grey-darker" >
+        <Segment padded="m">
           <form onSubmit={this.onSubmit}>
             {this.state.error && <p>{this.state.error}</p>}
 
@@ -76,9 +78,9 @@ class Register extends Component {
             </div>
 
             <div className="form-input">
-              <label htmlFor="confirm-password">
+              <label htmlFor="confirmPassword">
                 <span>Confirm Password <span className="required">*</span></span>
-                <input placeholder="Password" name="confirm-password" type="password" onChange={this.onChange} required />
+                <input placeholder="Password" name="confirmPassword" type="password" onChange={this.onChange} required />
               </label>
             </div>
 

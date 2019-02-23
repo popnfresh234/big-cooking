@@ -1,7 +1,7 @@
 $segment-radius: $radius-md;
 
 $container-color: $white;
-$container-margin-horizontal:  $margin-horizontal;
+$container-margin-horizontal: $margin-horizontal;
 $container-margin-vertical: $margin-vertical;
 $container-padding-vertical: $padding-vertical;
 
@@ -9,30 +9,58 @@ $container-padding-vertical: $padding-vertical;
   border-radius: $segment-radius;
 }
 
-.padded-none{
-  padding:0rem !important;
+.padded-none {
+  padding: 0rem !important;
 }
 
-.padded-small {
+.padded-s {
   padding: 1rem !important;
 }
 
-.padded-very {
+.padded-m {
   padding: 2rem !important;
 }
 
-.grey-darker{
+.padded-l {
+  padding: 3rem !important;
+}
+
+.padded-xl {
+  padding: 4rem !important;
+}
+
+.padded-xxl {
+  padding: 6rem !important;
+}
+
+.grey-darker {
   background: $grey-darker;
   color: $white;
 }
 
-.grey-lighter{
-  background: $grey-lighter
+.grey-lighter {
+  background: $grey-lighter;
 }
 
 .main-container {
   border: 1px solid $grey-lighter;
-  margin: $container-margin-vertical $container-margin-horizontal  0 $container-margin-horizontal;
+  margin: $container-margin-vertical $container-margin-horizontal 0 $container-margin-horizontal;
   padding: $container-padding-vertical;
   background-color: $container-color;
+}
+
+.recipe-detail-container {
+  border: 1px solid $grey-lighter;
+  margin: $container-margin-vertical $margin-s 0 $margin-s;
+  padding: $container-padding-vertical;
+  background-color: $container-color;
+}
+
+@media only screen and (min-width: 64em) {
+  .recipe-detail-container {
+    border: 1px solid $grey-lighter;
+    margin: $container-margin-vertical $margin-xxl * 3 0 $margin-xxl * 3;
+    padding: $container-padding-vertical;
+    background-color: $container-color;
+  }
 }
