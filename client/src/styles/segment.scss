@@ -7,10 +7,10 @@ $container-margin-vertical: $margin-l;
 $container-margin-vertical-mobile: $margin-l;
 $container-margin-horizontal-mobile:$margin-m;
 
-$container-padding-vertical: $padding-xl;
-$container-padding-horizontal: $padding-xl;
-$container-padding-vertical-mobile: $padding-m;
-$container-padding-horizontal-mobile: $padding-m;
+$container-padding-vertical-desktop: $padding-xl;
+$container-padding-horizontal-desktop: $padding-xl;
+$container-padding-vertical: $padding-m;
+$container-padding-horizontal: $padding-m;
 
 
 .segment {
@@ -53,14 +53,14 @@ $container-padding-horizontal-mobile: $padding-m;
 .main-container {
   border: 1px solid $grey-lighter;
   margin: 1rem;
-  padding: $container-padding-vertical 0 $container-padding-vertical;
+  padding: $container-padding-vertical-desktop 0 $container-padding-vertical-desktop;
   background-color: $container-color;
 }
 
 .recipe-detail-container {
   border: 1px solid $grey-lighter;
   margin: $container-margin-vertical-mobile $container-margin-horizontal-mobile $container-margin-vertical-mobile $container-margin-horizontal-mobile;
-  padding: $container-padding-vertical-mobile $container-padding-horizontal-mobile $container-padding-vertical-mobile $container-padding-horizontal-mobile;
+  padding: $container-padding-vertical $container-padding-horizontal $container-padding-vertical $container-padding-horizontal;
 
   background-color: $container-color;
 }
@@ -73,7 +73,7 @@ $container-padding-horizontal-mobile: $padding-m;
   .recipe-detail-container {
     border: 1px solid $grey-lighter;
     margin: $container-margin-vertical $margin-xxl * 3 0 $margin-xxl * 3;
-    padding: $container-padding-vertical $container-padding-horizontal $container-padding-vertical $container-padding-horizontal;
+    padding: $container-padding-vertical-desktop $container-padding-horizontal-desktop $container-padding-vertical-desktop $container-padding-horizontal-desktop;
     background-color: $container-color;
   }
 }
