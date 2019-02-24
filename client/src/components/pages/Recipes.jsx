@@ -70,7 +70,7 @@ class Recipes extends Component {
     return (
       <Segment type="main-container">
         <TitleBox />
-        <Spacer size="l" />
+        <Spacer size="xl" />
 
         {this.state.recipes}
 

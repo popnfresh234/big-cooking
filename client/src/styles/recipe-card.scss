@@ -5,11 +5,12 @@ $card-border-color: $grey-lighter;
 $card-border-color-hover: $theme-orange;
 $card-margin-vertical: $margin-l;
 $card-height: 25rem;
+$card-border-radius: $radius-md;
 
 .recipe-card {
   margin-bottom: $card-margin-vertical;
   max-width: 300px;
-  border-radius: $radius-md;
+  border-radius: $card-border-radius;
   border: 2px solid $card-border-color;
   display: inline-block;
   -o-transition: $default-transition-time;
@@ -19,13 +20,18 @@ $card-height: 25rem;
   transition: $default-transition-time;
 }
 
-
 .recipe-card:hover {
   border: 2px solid $card-border-color-hover;
 }
 
-.recipe-card:hover h2 {
-  color: $theme-orange;
+.recipe-card img {
+  border-radius: $card-border-radius;
+}
+
+.recipe-card h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .recipe-card h2 {
@@ -39,11 +45,11 @@ $card-height: 25rem;
   transition: $default-transition-time;
 }
 
-.recipe-card h1 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.recipe-card:hover h2 {
+  color: $theme-orange;
 }
+
+
 
 .recipe-card-details {
   padding: 1rem;

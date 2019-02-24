@@ -2,15 +2,17 @@ $segment-radius: $radius-md;
 
 $container-color: $white;
 
-$container-margin-horizontal: $margin-xxl;
-$container-margin-vertical: $margin-l;
-$container-margin-vertical-mobile: $margin-l;
-$container-margin-horizontal-mobile:$margin-m;
 
-$container-padding-vertical-desktop: $padding-xl;
-$container-padding-horizontal-desktop: $padding-xl;
+$container-margin-vertical: $margin-l;
+$container-margin-horizontal:$margin-m;
+$container-margin-horizontal-desktop: $margin-xxl;
+$container-margin-vertical-desktop: $margin-l;
+
+
 $container-padding-vertical: $padding-m;
 $container-padding-horizontal: $padding-m;
+$container-padding-vertical-desktop: $padding-xl;
+$container-padding-horizontal-desktop: $padding-xl;
 
 
 .segment {
@@ -52,14 +54,14 @@ $container-padding-horizontal: $padding-m;
 
 .main-container {
   border: 1px solid $grey-lighter;
-  margin: 1rem;
+  margin: $container-margin-vertical $container-margin-horizontal 0 $container-margin-horizontal;
   padding: $container-padding-vertical-desktop 0 $container-padding-vertical-desktop;
   background-color: $container-color;
 }
 
 .recipe-detail-container {
   border: 1px solid $grey-lighter;
-  margin: $container-margin-vertical-mobile $container-margin-horizontal-mobile $container-margin-vertical-mobile $container-margin-horizontal-mobile;
+  margin: $container-margin-vertical $container-margin-horizontal 0 $container-margin-horizontal;
   padding: $container-padding-vertical $container-padding-horizontal $container-padding-vertical $container-padding-horizontal;
 
   background-color: $container-color;
@@ -67,12 +69,12 @@ $container-padding-horizontal: $padding-m;
 
 @media only screen and (min-width: 64em) {
   .main-container {
-    margin: $container-margin-vertical $container-margin-horizontal 0 $container-margin-horizontal;
+    margin: $container-margin-vertical-desktop $container-margin-horizontal-desktop $container-margin-vertical-desktop $container-margin-horizontal-desktop;
   }
 
   .recipe-detail-container {
     border: 1px solid $grey-lighter;
-    margin: $container-margin-vertical $margin-xxl * 3 0 $margin-xxl * 3;
+    margin: $container-margin-vertical-desktop $margin-xxl * 3 0 $margin-xxl * 3;
     padding: $container-padding-vertical-desktop $container-padding-horizontal-desktop $container-padding-vertical-desktop $container-padding-horizontal-desktop;
     background-color: $container-color;
   }
