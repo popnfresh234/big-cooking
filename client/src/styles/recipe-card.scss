@@ -4,6 +4,7 @@ $h6-padding-bottom: $padding-s;
 $card-border-color: $grey-lighter;
 $card-border-color-hover: $theme-orange;
 $card-margin-vertical: $margin-l;
+$card-height: 25rem;
 
 .recipe-card {
   margin-bottom: $card-margin-vertical;
@@ -66,7 +67,7 @@ $card-margin-vertical: $margin-l;
 .placeholder {
   margin-bottom: $card-margin-vertical;
   width: 300px;
-  height: 100%;
+  height: $card-height;
 }
 
 .placeholder i {
@@ -83,6 +84,7 @@ $card-margin-vertical: $margin-l;
   }
 
   .placeholder {
+    height: 100%;
     margin:0;
   }
 }

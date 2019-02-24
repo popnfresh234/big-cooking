@@ -12,12 +12,6 @@ $theme-white-text: hsl(20, 60%, 99%);
 $theme-orange: #f48f29;
 $theme-green: #b1d8b9;
 $bg-color: #ffffe0;
-$horizontal-gutter: 2%;
-$vertical-gutter: 1%;
-$margin-horizontal: 5%;
-$margin-vertical: 2%;
-$padding-horizontal: 2%;
-$padding-vertical: 5%;
 $login-color: $grey-darker;
 $border-color: $grey-light;
 
@@ -33,11 +27,14 @@ $margin-tiny: 0.033rem;
 $radius-md: 0.33rem;
 $radius-s: 0.1rem;
 
+$padding-xxl: 8rem;
+$padding-xl: 4rem;
 $padding-l: 2rem;
 $padding-m: 1rem;
 $padding-s: 0.5rem;
 $padding-xs: 0.33rem;
 $padding-xxs: 0.1rem;
+$padding-tiny: 0.033rem;
 
 $font-xxl: 4rem;
 $font-xl: 2rem;

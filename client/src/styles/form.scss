@@ -4,9 +4,11 @@ $input-margin-top: $margin-xxs;
 $input-padding: $padding-s;
 $label-margin-top: $margin-m;
 $button-margin-top: $margin-m;
+$form-margin-vertical: $margin-l;
+$form-margin-vertical-mobile: $margin-m;
 
 .form-container {
-  margin: $vertical-gutter auto;
+  margin: 0 auto;
   max-width: 95vw;
 }
 

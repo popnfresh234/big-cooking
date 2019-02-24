@@ -41,31 +41,31 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="form-container">
-        <TitleBox />
-        <Spacer size="s" />
-        <Segment padded="l" color="grey-darker">
-          <form onSubmit={this.onSubmit}>
-            {this.state.error && <p>{this.state.error}</p>}
-            <div className="form-input">
-              <label htmlFor="email">
-                <span>E-mail <span className="required">*</span></span>
-                <input placeholder="E-mail" name="email" type="email" onChange={this.onChange} required />
-              </label>
-            </div>
+      <Segment type="main-container">
+        <div className="form-container">
+          <TitleBox />
+          <Spacer size="l" />
+          <Segment padded="l" color="grey-darker">
+            <form onSubmit={this.onSubmit}>
+              {this.state.error && <p>{this.state.error}</p>}
+              <div className="form-input">
+                <label htmlFor="email">
+                  <span>E-mail <span className="required">*</span></span>
+                  <input placeholder="E-mail" name="email" type="email" onChange={this.onChange} required />
+                </label>
+              </div>
 
-            <div className="form-input">
-              <label htmlFor="password">
-                <span>Password <span className="required">*</span></span>
-                <input placeholder="Password" name="password" type="password" onChange={this.onChange} required />
-              </label>
-            </div>
-
-            <button type="submit">Sign in!</button>
-
-          </form>
-        </Segment>
-      </div>
+              <div className="form-input">
+                <label htmlFor="password">
+                  <span>Password <span className="required">*</span></span>
+                  <input placeholder="Password" name="password" type="password" onChange={this.onChange} required />
+                </label>
+              </div>
+              <button type="submit">Sign in!</button>
+            </form>
+          </Segment>
+        </div>
+      </Segment>
     );
   }
 }
