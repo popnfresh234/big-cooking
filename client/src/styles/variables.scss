@@ -1,6 +1,4 @@
 $default-transition-time: 0.2s;
-$button-transition-time: $default-transition-time;
-$link-transition-time: $default-transition-time;
 
 $grey-darker: hsl(0, 0%, 21%) !default;
 $grey-dark: hsl(0, 0%, 29%) !default;
@@ -9,6 +7,8 @@ $grey-light: hsl(0, 0%, 71%) !default;
 $grey-lighter: hsl(0, 0%, 86%) !default;
 $white: hsl(0, 0, 100%);
 $red: hsl(356, 94%, 53%);
+$theme-red: hsl(7, 71%, 47%);
+$theme-white-text: hsl(20, 60%, 99%);
 $theme-orange: #f48f29;
 $theme-green: #b1d8b9;
 $bg-color: #ffffe0;

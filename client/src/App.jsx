@@ -24,25 +24,14 @@ class App extends Component {
   }
 
   componentWillMount() {
-    axios.get( '/api/login/check' )
-      .then( ( result ) => {
-        if ( result.status === 200 ) {
-          const isLoggedIn = JSON.parse( localStorage.getItem( 'isLoggedIn' ) );
-          const userId = JSON.parse( localStorage.getItem( 'userId' ) );
-          const userName = localStorage.getItem( 'userName' );
-          this.setState( {
-            isLoggedIn,
-            userId,
-            userName,
-          } );
-        } else {
-          this.setState( {
-            isLoggedIn: false,
-            userId: '',
-            userName: '',
-          } );
-        }
-      } );
+    const isLoggedIn = JSON.parse( localStorage.getItem( 'isLoggedIn' ) );
+    const userId = JSON.parse( localStorage.getItem( 'userId' ) );
+    const userName = localStorage.getItem( 'userName' );
+    this.setState( {
+      isLoggedIn,
+      userId,
+      userName,
+    } );
   }
 
   handleAuthState( isLoggedIn, userId, userName ) {
@@ -100,7 +89,8 @@ class App extends Component {
             rootPath="myrecipes"
             key="myrecipes"
             userId={this.state.userId}
-            cardsPerRow={4}
+            cardsPerRow={12 / 4}
+            handleAuthState={this.handleAuthState}
             handleLoading={this.handleLoading}
             component={Recipes}
           />
@@ -112,6 +102,7 @@ class App extends Component {
             key="search"
             userId={this.state.userId}
             cardsPerRow={4}
+            handleAuthState={this.handleAuthState}
             handleLoading={this.handleLoading}
             component={Recipes}
           />
@@ -122,6 +113,7 @@ class App extends Component {
             rootPath="recipe-details"
             userId={this.state.userId}
             key="recipe-details"
+            handleAuthState={this.handleAuthState}
             handleLoading={this.handleLoading}
             component={RecipeDetails}
           />
@@ -133,6 +125,7 @@ class App extends Component {
             key="new-recipe"
             userId={this.state.userId}
             userName={this.state.userName}
+            handleAuthState={this.handleAuthState}
             handleLoading={this.handleLoading}
             component={NewRecipe}
           />
@@ -144,6 +137,7 @@ class App extends Component {
             key="new-recipe"
             userId={this.state.userId}
             userName={this.state.userName}
+            handleAuthState={this.handleAuthState}
             handleLoading={this.handleLoading}
             component={NewRecipe}
           />

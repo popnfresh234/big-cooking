@@ -26,6 +26,11 @@ input {
   padding: $input-padding;
 }
 
+input:focus{
+  outline-style: auto; 
+  outline-color: $theme-orange;
+}
+
 label {
   display: block;
   text-align: left;

@@ -1,0 +1,9 @@
+@media only screen and (min-width: 64em) {
+  .recipe-row {
+    margin-bottom: $margin-xl;
+  }
+
+  .recipe-row:last-child {
+    margin-bottom: 0;
+  }
+}

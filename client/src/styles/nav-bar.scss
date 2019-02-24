@@ -1,5 +1,5 @@
 $nav-item-padding: $padding-s;
-
+$nav-item-hover-color: $theme-orange;
 .nav{
   background-color:$bg-color;
 }
@@ -21,4 +21,8 @@ $nav-item-padding: $padding-s;
 
 .nav-item-spacer {
   display: none;
+}
+
+.nav-item:hover {
+  color:$nav-item-hover-color;
 }

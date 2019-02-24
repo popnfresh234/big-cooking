@@ -44,7 +44,6 @@ $container-padding-vertical: $padding-vertical;
 
 .main-container {
   border: 1px solid $grey-lighter;
-  margin: $container-margin-vertical $container-margin-horizontal 0 $container-margin-horizontal;
   padding: $container-padding-vertical;
   background-color: $container-color;
 }
@@ -57,6 +56,10 @@ $container-padding-vertical: $padding-vertical;
 }
 
 @media only screen and (min-width: 64em) {
+  .main-container {
+    margin: $container-margin-vertical $container-margin-horizontal 0 $container-margin-horizontal;
+  }
+
   .recipe-detail-container {
     border: 1px solid $grey-lighter;
     margin: $container-margin-vertical $margin-xxl * 3 0 $margin-xxl * 3;

@@ -11,10 +11,19 @@
 @import "./spacer";
 @import "./titlebox.scss";
 @import "./recipe-details.scss";
+@import "./recipes.scss";
 
 @font-face {
   font-family: "Bell";
   src: url("./fonts/BELL.ttf");
+}
+
+*:not(body){
+  -o-transition: $default-transition-time;
+  -ms-transition: $default-transition-time;
+  -moz-transition: $default-transition-time;
+  -webkit-transition: $default-transition-time;
+  transition: $default-transition-time;
 }
 
 *:not(i) {
@@ -35,6 +44,13 @@ body {
   max-width: 4%;
 }
 
+.flex-center {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
 .content {
   min-height: 100vh;
   background-color: $bg-color;
@@ -51,6 +67,10 @@ div {
 
 .right-align {
   text-align: right;
+}
+
+.mobile-center{
+  text-align: center;
 }
 
 :focus {
