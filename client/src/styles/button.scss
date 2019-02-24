@@ -1,29 +1,51 @@
 $button-padding: 0.33rem;
+$edit-button-width: 80%;
 $button-color: $grey-darker;
 $button-hover-color: $grey-lighter;
 $button-bg-color: $theme-green;
 $button-hover-bg-color: $theme-orange;
 $button-radius: $radius-s;
-
+$edit-buttons-margin-vertical: $margin-m;
 button {
   color: $button-color;
   background: $button-bg-color;
   border: 1px solid $border-color;
   border-radius: $button-radius;
   padding: $button-padding;
-  -o-transition: $button-transition-time;
-  -ms-transition: $button-transition-time;
-  -moz-transition: $button-transition-time;
-  -webkit-transition: $button-transition-time;
-  transition: $button-transition-time;
+  -o-transition: $default-transition-time;
+  -ms-transition: $default-transition-time;
+  -moz-transition: $default-transition-time;
+  -webkit-transition: $default-transition-time;
+  transition: $default-transition-time;
+}
+
+.delete {
+  color: $theme-white-text;
+  background-color: $theme-red;
+}
+
+.delete:hover{
+  color: $theme-red;
+  background-color: $theme-white-text;
+}
+
+.edit-buttons {
+  margin: $edit-buttons-margin-vertical 0 $edit-buttons-margin-vertical 0;
+  width: $edit-button-width;
+}
+
+@media only screen and (min-width: 64em) {
+  .edit-buttons {
+    margin: 0;
+  }
 }
 
 button:focus {
   color: white;
-  background:$button-bg-color;
+  background: $button-bg-color;
 }
 
 button:hover {
-  color:$button-hover-color;
+  color: $button-hover-color;
   background: $button-hover-bg-color;
 }

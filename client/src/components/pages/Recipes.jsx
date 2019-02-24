@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import RecipeCard from '../elements/RecipeCard.jsx';
+import RecipeCardPlaceholder from '../elements/RecipeCardPlaceholder.jsx';
 import TitleBox from '../elements/TitleBox.jsx';
 import Spacer from '../elements/Spacer.jsx';
 import Segment from '../elements/Segment.jsx';
@@ -34,7 +35,27 @@ class Recipes extends Component {
       axios.get( fn() )
         .then( ( baseRecipeResponse ) => {
           if ( baseRecipeResponse.data ) {
-            const recipes = baseRecipeResponse.data.map( recipe => <div key={recipe.id} className={`col-xs-12 col-md-${this.props.cardsPerRow}`}><RecipeCard recipe={recipe} /></div> );
+            const baseRecipes = baseRecipeResponse.data;
+            if ( this.props.rootPath !== 'random' ) baseRecipeResponse.data.unshift( { placeholder: true, id: 'placeholder' } );
+
+            const chunkArray = [];
+            for ( let i = 0; i < baseRecipes.length; i += this.props.cardsPerRow + 1 ) {
+              chunkArray.push( baseRecipes.slice( i, i + this.props.cardsPerRow + 1 ) );
+            }
+
+            const recipes = chunkArray.map( ( recipeArray, index ) =>
+              (
+                <div className="row recipe-row" key={index}>
+                  {
+                    recipeArray.map( ( recipe ) => {
+                      if ( recipe.placeholder ) {
+                        return <div key={recipe.id} className={`col-xs-12 col-md-${this.props.cardsPerRow}`}><RecipeCardPlaceholder /></div>;
+                      }
+                        return <div key={recipe.id} className={`col-xs-12 col-md-${this.props.cardsPerRow}`}><RecipeCard recipe={recipe} /></div>;
+                    } )
+                    }
+                </div>
+              ) );
             this.setState( {
               recipes,
             } );
@@ -50,9 +71,9 @@ class Recipes extends Component {
       <Segment type="main-container">
         <TitleBox />
         <Spacer size="l" />
-        <div className="row">
-          {this.state.recipes}
-        </div>
+
+        {this.state.recipes}
+
       </Segment>
     );
   }

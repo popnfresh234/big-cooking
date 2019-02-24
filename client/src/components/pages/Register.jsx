@@ -49,48 +49,50 @@ class Register extends Component {
 
   render() {
     return (
-      <div className="form-container">
-        <TitleBox />
-        <Spacer size="s" />
-        <Segment padded="m">
-          <form onSubmit={this.onSubmit}>
-            {this.state.error && <p>{this.state.error}</p>}
+      <Segment className="main-container">
+        <div className="form-container">
+          <TitleBox />
+          <Spacer size="l" />
+          <Segment padded="l" color="grey-darker">
+            <form onSubmit={this.onSubmit}>
+              {this.state.error && <p>{this.state.error}</p>}
 
-            <div className="form-input">
-              <label htmlFor="name">
-                <span>Name <span className="required">*</span></span>
-                <input placeholder="Name" name="name" type="text" onChange={this.onChange} required />
-              </label>
-            </div>
+              <div className="form-input">
+                <label htmlFor="name">
+                  <span>Name <span className="required">*</span></span>
+                  <input placeholder="Name" name="name" type="text" onChange={this.onChange} required />
+                </label>
+              </div>
 
-            <div className="form-input">
-              <label htmlFor="email">
-                <span>E-mail <span className="required">*</span></span>
-                <input placeholder="E-mail" name="email" type="email" onChange={this.onChange} required />
-              </label>
-            </div>
+              <div className="form-input">
+                <label htmlFor="email">
+                  <span>E-mail <span className="required">*</span></span>
+                  <input placeholder="E-mail" name="email" type="email" onChange={this.onChange} required />
+                </label>
+              </div>
 
-            <div className="form-input">
-              <label htmlFor="password">
-                <span>Password <span className="required">*</span></span>
-                <input placeholder="Password" name="password" type="password" onChange={this.onChange} required />
-              </label>
-            </div>
+              <div className="form-input">
+                <label htmlFor="password">
+                  <span>Password <span className="required">*</span></span>
+                  <input placeholder="Password" name="password" type="password" onChange={this.onChange} required />
+                </label>
+              </div>
 
-            <div className="form-input">
-              <label htmlFor="confirmPassword">
-                <span>Confirm Password <span className="required">*</span></span>
-                <input placeholder="Password" name="confirmPassword" type="password" onChange={this.onChange} required />
-              </label>
-            </div>
-
-
-            <button type="submit">Register!</button>
+              <div className="form-input">
+                <label htmlFor="confirmPassword">
+                  <span>Confirm Password <span className="required">*</span></span>
+                  <input placeholder="Password" name="confirmPassword" type="password" onChange={this.onChange} required />
+                </label>
+              </div>
 
 
-          </form>
-        </Segment>
-      </div>
+              <button type="submit">Register!</button>
+
+
+            </form>
+          </Segment>
+        </div>
+      </Segment>
     );
   }
 }

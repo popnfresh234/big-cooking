@@ -1,5 +1,4 @@
 $link-active-color: $theme-orange;
-$link-hover-color: $theme-orange;
 $link-color: $grey-darker;
 
 .navlink-active {
@@ -10,15 +9,3 @@ a {
   color: $link-color;
   text-decoration: none;
 }
-
-a:hover {
-  color:$link-hover-color;
-}
-
-a {
-    -o-transition: $link-transition-time;
-    -ms-transition: $link-transition-time;
-    -moz-transition: $link-transition-time;
-    -webkit-transition: $link-transition-time;
-    transition: $link-transition-time;
-  }

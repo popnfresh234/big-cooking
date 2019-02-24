@@ -35,7 +35,7 @@ app.use( cookieSession( {
 app.use( '/api', indexRouter );
 app.use( '/api/recipes', recipesRouter );
 
-app.get( '/*', ( req, res ) => {
+app.get( '*', ( req, res ) => {
   console.log( 'HERE' );
   res.sendFile( path.join( __dirname, './public/index.html' ), ( err ) => {
     if ( err ) {

@@ -1,19 +1,42 @@
 $card-margin-bottom: $margin-l;
 $h6-padding-top: $padding-s;
 $h6-padding-bottom: $padding-s;
+$card-border-color: $grey-lighter;
+$card-border-color-hover: $theme-orange;
+$card-margin-vertical: $margin-l;
+$card-height: 25rem;
 
 .recipe-card {
+  margin-bottom: $card-margin-vertical;
   max-width: 300px;
-  margin-bottom: $card-margin-bottom;
   border-radius: $radius-md;
-  border: 1px solid $grey-lighter;
+  border: 2px solid $card-border-color;
   display: inline-block;
+  -o-transition: $default-transition-time;
+  -ms-transition: $default-transition-time;
+  -moz-transition: $default-transition-time;
+  -webkit-transition: $default-transition-time;
+  transition: $default-transition-time;
+}
+
+
+.recipe-card:hover {
+  border: 2px solid $card-border-color-hover;
+}
+
+.recipe-card:hover h2 {
+  color: $theme-orange;
 }
 
 .recipe-card h2 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  -o-transition: $default-transition-time;
+  -ms-transition: $default-transition-time;
+  -moz-transition: $default-transition-time;
+  -webkit-transition: $default-transition-time;
+  transition: $default-transition-time;
 }
 
 .recipe-card h1 {
@@ -22,16 +45,16 @@ $h6-padding-bottom: $padding-s;
   text-overflow: ellipsis;
 }
 
-.recipe-details {
+.recipe-card-details {
   padding: 1rem;
 }
 
-.recipe-details h6 {
+.recipe-card-details h6 {
   padding: $h6-padding-top 0 $h6-padding-bottom 0;
   text-align: left;
 }
 
-.recipe-details .row {
+.recipe-card-details .row {
   padding: $padding-m 0 $padding-m 0;
   border-top: 1px solid $theme-green;
   border-bottom: 1px solid $theme-green;
@@ -39,4 +62,29 @@ $h6-padding-bottom: $padding-s;
 
 .recipe-clock-icon {
   color: $grey-light;
+}
+
+.placeholder {
+  margin-bottom: $card-margin-vertical;
+  width: 300px;
+  height: $card-height;
+}
+
+.placeholder i {
+  color: $theme-green;
+}
+
+.placeholder h2 {
+  color: $grey;
+}
+
+@media only screen and (min-width: 64em) {
+  .recipe-card{
+    margin:0;
+  }
+
+  .placeholder {
+    height: 100%;
+    margin:0;
+  }
 }

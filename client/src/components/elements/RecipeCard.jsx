@@ -7,7 +7,7 @@ class RecipeOverview extends Component {
       <div className="recipe-card">
         <NavLink to={`/recipe-details/${this.props.recipe.id}`}>
           <img src={this.props.recipe.image_url} alt={this.props.recipe.name} />
-          <div className="recipe-details">
+          <div className="recipe-card-details">
             <h2>{this.props.recipe.name}</h2>
             <h6>{this.props.recipe.description}</h6>
             <div className="row">

@@ -1,9 +1,17 @@
 $segment-radius: $radius-md;
 
 $container-color: $white;
-$container-margin-horizontal: $margin-horizontal;
-$container-margin-vertical: $margin-vertical;
-$container-padding-vertical: $padding-vertical;
+
+$container-margin-horizontal: $margin-xxl;
+$container-margin-vertical: $margin-l;
+$container-margin-vertical-mobile: $margin-l;
+$container-margin-horizontal-mobile:$margin-m;
+
+$container-padding-vertical: $padding-xl;
+$container-padding-horizontal: $padding-xl;
+$container-padding-vertical-mobile: $padding-m;
+$container-padding-horizontal-mobile: $padding-m;
+
 
 .segment {
   border-radius: $segment-radius;
@@ -44,23 +52,28 @@ $container-padding-vertical: $padding-vertical;
 
 .main-container {
   border: 1px solid $grey-lighter;
-  margin: $container-margin-vertical $container-margin-horizontal 0 $container-margin-horizontal;
-  padding: $container-padding-vertical;
+  margin: 1rem;
+  padding: $container-padding-vertical 0 $container-padding-vertical;
   background-color: $container-color;
 }
 
 .recipe-detail-container {
   border: 1px solid $grey-lighter;
-  margin: $container-margin-vertical $margin-s 0 $margin-s;
-  padding: $container-padding-vertical;
+  margin: $container-margin-vertical-mobile $container-margin-horizontal-mobile $container-margin-vertical-mobile $container-margin-horizontal-mobile;
+  padding: $container-padding-vertical-mobile $container-padding-horizontal-mobile $container-padding-vertical-mobile $container-padding-horizontal-mobile;
+
   background-color: $container-color;
 }
 
 @media only screen and (min-width: 64em) {
+  .main-container {
+    margin: $container-margin-vertical $container-margin-horizontal 0 $container-margin-horizontal;
+  }
+
   .recipe-detail-container {
     border: 1px solid $grey-lighter;
     margin: $container-margin-vertical $margin-xxl * 3 0 $margin-xxl * 3;
-    padding: $container-padding-vertical;
+    padding: $container-padding-vertical $container-padding-horizontal $container-padding-vertical $container-padding-horizontal;
     background-color: $container-color;
   }
 }
