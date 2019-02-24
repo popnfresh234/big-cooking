@@ -92,27 +92,33 @@ class RecipeDetails extends Component {
               <Spacer size="mobile-m" />
               <div className="row left-align">
                 <div className="col-xs-12 col-md-8"><h1>{this.state.recipe.name ? this.state.recipe.name.toUpperCase() : ''}</h1></div>
-                <div className="col-xs-6 col-md mobile-center"><NavLink to={`/edit-recipe/${this.props.computedMatch.params.id}`} className="flex-center align-center"><button className="edit-buttons edit">EDIT</button></NavLink></div>
+                <div className="col-xs-6 col-md mobile-center">
+                  <NavLink to={`/edit-recipe/${this.props.computedMatch.params.id}`} className="flex-center align-center"><button className="edit-buttons edit">EDIT</button></NavLink>
+                </div>
                 <div className="col-xs-6 col-md mobile-center"><div className="flex-center align-center"><button className="edit-buttons delete">DELETE</button></div></div>
               </div>
               <Spacer size="m" />
               <div className="row left-align">
-                <div className="col-xs-4 col-md-2">Author: </div><div className="col-xs col-md"><span className="left-margin">{this.state.recipe.author}</span></div>
+                <div className="col-xs-4 col-md-2">Author: </div>
+                <div className="col-xs col-md"><span className="left-margin">{this.state.recipe.author}</span></div>
               </div>
               <Spacer size="xs" />
 
               <div className="row left-align">
-                <div className="col-xs-4 col-md-2">Description: </div><div className="col-xs col-md"><span className="left-margin">{this.state.recipe.description}</span></div>
+                <div className="col-xs-4 col-md-2">Description: </div>
+                <div className="col-xs col-md"><span className="left-margin">{this.state.recipe.description}</span></div>
               </div>
               <Spacer size="xs" />
 
               <div className="row left-align">
-                <div className="col-xs-4 col-md-2">Duration: </div><div className="col-xs col-md"><span className="left-margin"><i className="recipe-clock-icon far fa-clock" /> {this.state.recipe.duration} minutes</span></div>
+                <div className="col-xs-4 col-md-2">Duration: </div>
+                <div className="col-xs col-md"><span className="left-margin"><i className="recipe-clock-icon far fa-clock" /> {this.state.recipe.duration} minutes</span></div>
               </div>
               <Spacer size="xs" />
 
               <div className="row left-align">
-                <div className="col-xs-4 col-md-2">Notes: </div><div className="col-xs col-md"><span className="left-margin">{this.state.recipe.note}</span></div>
+                <div className="col-xs-4 col-md-2">Notes: </div>
+                <div className="col-xs col-md"><span className="left-margin">{this.state.recipe.note}</span></div>
               </div>
               <Spacer size="m" />
             </div>
