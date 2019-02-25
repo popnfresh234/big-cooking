@@ -1,0 +1,10 @@
+$new-recipe-image-width: $image-width;
+
+.img-new-recipe {
+    width: $new-recipe-image-width;
+  }
+
+.input-new-recipe-img{
+    width: $new-recipe-image-width;
+    display: inline-block;
+}

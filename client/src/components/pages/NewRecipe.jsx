@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import uuidv1 from 'uuid/v1';
 import axios from 'axios';
+import Segment from '../elements/Segment.jsx';
+import Spacer from '../elements/Spacer.jsx';
+import TitleBox from '../elements/TitleBox.jsx';
+import ImageUpload from '../elements/ImageUpload.jsx';
 
 class NewRecipe extends Component {
   constructor( props ) {
@@ -173,8 +177,8 @@ class NewRecipe extends Component {
 
   addIngredient() {
     if ( this.state.currentIngredient.name
-        && this.state.currentIngredient.units
-         && this.state.currentIngredient.quantity ) {
+      && this.state.currentIngredient.units
+      && this.state.currentIngredient.quantity ) {
       const { recipe, currentIngredient } = this.state;
       currentIngredient.id = uuidv1();
       recipe.ingredients.push( currentIngredient );
@@ -235,7 +239,49 @@ class NewRecipe extends Component {
   }
   render() {
     return (
-      <h1>new recipe</h1>
+      <Segment type="main-container">
+        <div className="form-container new-recipe-container">
+          <TitleBox />
+          <Spacer size="l" />
+          <div className="row ">
+            <div className="col-xs-12 col-md-7 evenly-spaced-col">
+              <Spacer size="desktop-m" />
+              <div className="row">
+                <div className="col-xs-6"><span className="flex-center">RECIPE NAME</span></div>
+                <div className="col-xs-6"><input onChange={this.onRecipeChange} name="name" value={this.state.recipe.name} /></div>
+              </div>
+
+              <Spacer size="mobile-s" />
+              <div className="row">
+                <div className="col-xs-6"><span className="flex-center">CATEGORY</span></div>
+                <div className="col-xs-6"><input onChange={this.onRecipeChange} name="category" value={this.state.recipe.category} /></div>
+              </div>
+
+              <Spacer size="mobile-s" />
+
+              <div className="row">
+                <div className="col-xs-6"><span className="flex-center">DESCRIPTION</span></div>
+                <div className="col-xs-6"><input onChange={this.onRecipeChange} name="description" value={this.state.recipe.description} /></div>
+              </div>
+
+              <Spacer size="mobile-s" />
+
+              <div className="row">
+                <div className="col-xs-6"><span className="flex-center">DURATION</span></div>
+                <div className="col-xs-6"><input type="number" onChange={this.onRecipeChange} name="duration" value={this.state.recipe.duration} /></div>
+              </div>
+              <Spacer size="desktop-m" />
+
+            </div>
+            <div className="col-xs-12 col-md-5 first-xs last-md">
+
+              <ImageUpload />
+              <Spacer size="mobile-l" />
+            </div>
+
+          </div>
+        </div>
+      </Segment>
     );
   }
 }

@@ -4,7 +4,7 @@ $container-color: $white;
 
 
 $container-margin-vertical: $margin-l;
-$container-margin-horizontal:$margin-m;
+$container-margin-horizontal:$margin-s;
 $container-margin-horizontal-desktop: $margin-xxl;
 $container-margin-vertical-desktop: $margin-l;
 
@@ -14,6 +14,7 @@ $container-padding-horizontal: $padding-m;
 $container-padding-vertical-desktop: $padding-xl;
 $container-padding-horizontal-desktop: $padding-xl;
 
+$form-container-margin-horizontal: $margin-m;
 
 .segment {
   border-radius: $segment-radius;
@@ -67,6 +68,11 @@ $container-padding-horizontal-desktop: $padding-xl;
   background-color: $container-color;
 }
 
+.form-container {
+  margin: 0 $form-container-margin-horizontal;
+  max-width: 95vw;
+}
+
 @media only screen and (min-width: 64em) {
   .main-container {
     margin: $container-margin-vertical-desktop $container-margin-horizontal-desktop $container-margin-vertical-desktop $container-margin-horizontal-desktop;
@@ -77,5 +83,14 @@ $container-padding-horizontal-desktop: $padding-xl;
     margin: $container-margin-vertical-desktop $margin-xxl * 3 0 $margin-xxl * 3;
     padding: $container-padding-vertical-desktop $container-padding-horizontal-desktop $container-padding-vertical-desktop $container-padding-horizontal-desktop;
     background-color: $container-color;
+  }
+
+  .form-container {
+    margin: 0 auto;
+    max-width: 33vw;
+  }
+
+  .new-recipe-container {
+    max-width: 66vw;
   }
 }

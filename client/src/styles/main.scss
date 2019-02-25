@@ -12,6 +12,7 @@
 @import "./titlebox.scss";
 @import "./recipe-details.scss";
 @import "./recipes.scss";
+@import "./new-recipe.scss";
 
 @font-face {
   font-family: "Bell";
@@ -56,6 +57,12 @@ body {
   overflow-wrap: break-word;
 }
 
+.evenly-spaced-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .align-center {
   align-items: center;
 }
@@ -77,6 +84,10 @@ div {
 
 .right-align {
   text-align: right;
+}
+
+.center {
+  text-align: center;
 }
 
 .mobile-center{
