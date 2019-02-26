@@ -68,7 +68,7 @@ class Recipes extends Component {
 
   render() {
     return (
-      <Segment type="main-container">
+      <Segment padded="xxl-ignore-mobile" type="main-container">
         <TitleBox />
         <Spacer size="xl" />
 

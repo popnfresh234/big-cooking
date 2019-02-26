@@ -7,6 +7,7 @@ import Spacer from '../elements/Spacer.jsx';
 import Segment from '../elements/Segment.jsx';
 import { NavLink, Redirect } from 'react-router-dom';
 
+
 class RecipeDetails extends Component {
   constructor( props ) {
     super( props );
@@ -22,7 +23,6 @@ class RecipeDetails extends Component {
     this.props.handleLoading();
     axios.get( `/api/recipes/${this.props.computedMatch.params.id}` )
       .then( ( result ) => {
-        console.log( result );
         this.props.handleLoading();
         const ingredients = this.calcIngredients( result.data.ingredients, 1 );
 
@@ -82,10 +82,9 @@ class RecipeDetails extends Component {
     return (
       <div>
 
-        <Segment padded="xxl" ignoreMobile="true" type="recipe-detail-container">
+        <Segment type="main-container">
           <TitleBox />
           <Spacer size="xl" />
-
           <div className="row">
             <div className="col-xs-12 col-md-2"><img className="img-recipe-detail" src={this.state.recipe.image_url} alt={this.state.recipe.name} /></div>
             <div className="col-xs">
@@ -100,25 +99,25 @@ class RecipeDetails extends Component {
               <Spacer size="m" />
               <div className="row left-align">
                 <div className="col-xs-4 col-md-2">Author: </div>
-                <div className="col-xs col-md"><span className="left-margin">{this.state.recipe.author}</span></div>
+                <div className="col-xs col-md"><span>{this.state.recipe.author}</span></div>
               </div>
               <Spacer size="xs" />
 
               <div className="row left-align">
                 <div className="col-xs-4 col-md-2">Description: </div>
-                <div className="col-xs col-md"><span className="left-margin">{this.state.recipe.description}</span></div>
+                <div className="col-xs col-md"><span >{this.state.recipe.description}</span></div>
               </div>
               <Spacer size="xs" />
 
               <div className="row left-align">
                 <div className="col-xs-4 col-md-2">Duration: </div>
-                <div className="col-xs col-md"><span className="left-margin"><i className="recipe-clock-icon far fa-clock" /> {this.state.recipe.duration} minutes</span></div>
+                <div className="col-xs col-md"><span><i className="recipe-clock-icon far fa-clock" /> {this.state.recipe.duration} minutes</span></div>
               </div>
               <Spacer size="xs" />
 
               <div className="row left-align">
                 <div className="col-xs-4 col-md-2">Notes: </div>
-                <div className="col-xs col-md"><span className="left-margin">{this.state.recipe.note}</span></div>
+                <div className="col-xs col-md"><span>{this.state.recipe.note}</span></div>
               </div>
               <Spacer size="m" />
             </div>
@@ -128,14 +127,14 @@ class RecipeDetails extends Component {
         </Segment>
         <Spacer size="m" />
 
-        <Segment padded="xxl" ignoreMobile type="recipe-detail-container">
+        <Segment type="main-container">
           <h1 className="left-align">INGREDIENTS</h1>
           <Spacer size="s" />
           {this.state.ingredients}
         </Segment>
         <Spacer size="m" />
 
-        <Segment padded="xxl" ignoreMobile type="recipe-detail-container">
+        <Segment type="main-container">
           <h1 className="left-align">DIRECTIONS</h1>
           <Spacer size="s" />
           {this.state.directions}

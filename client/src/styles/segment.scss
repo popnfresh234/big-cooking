@@ -12,7 +12,7 @@ $container-margin-vertical-desktop: $margin-l;
 $container-padding-vertical: $padding-m;
 $container-padding-horizontal: $padding-m;
 $container-padding-vertical-desktop: $padding-xl;
-$container-padding-horizontal-desktop: $padding-xl;
+$container-padding-horizontal-desktop: $padding-xxl;
 
 $form-container-margin-horizontal: $margin-m;
 
@@ -56,17 +56,10 @@ $form-container-margin-horizontal: $margin-m;
 .main-container {
   border: 1px solid $grey-lighter;
   margin: $container-margin-vertical $container-margin-horizontal 0 $container-margin-horizontal;
-  padding: $container-padding-vertical-desktop 0 $container-padding-vertical-desktop;
+  padding: $container-padding-vertical $container-padding-horizontal;
   background-color: $container-color;
 }
 
-.recipe-detail-container {
-  border: 1px solid $grey-lighter;
-  margin: $container-margin-vertical $container-margin-horizontal 0 $container-margin-horizontal;
-  padding: $container-padding-vertical $container-padding-horizontal $container-padding-vertical $container-padding-horizontal;
-
-  background-color: $container-color;
-}
 
 .form-container {
   margin: 0 $form-container-margin-horizontal;
@@ -76,13 +69,7 @@ $form-container-margin-horizontal: $margin-m;
 @media only screen and (min-width: 64em) {
   .main-container {
     margin: $container-margin-vertical-desktop $container-margin-horizontal-desktop $container-margin-vertical-desktop $container-margin-horizontal-desktop;
-  }
-
-  .recipe-detail-container {
-    border: 1px solid $grey-lighter;
-    margin: $container-margin-vertical-desktop $margin-xxl * 3 0 $margin-xxl * 3;
-    padding: $container-padding-vertical-desktop $container-padding-horizontal-desktop $container-padding-vertical-desktop $container-padding-horizontal-desktop;
-    background-color: $container-color;
+    padding: $container-padding-vertical-desktop $container-padding-vertical-desktop;
   }
 
   .form-container {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Segment extends Component {
   render() {
-    const padded = this.props.padded && !this.props.ignoreMobile ? `padded-${this.props.padded}` : '';
+    const padded = this.props.padded ? `padded-${this.props.padded}` : '';
     return (
       <div className={
         `segment 
