@@ -121,6 +121,7 @@ class ImageUpload extends Component {
 
 
   render() {
+    console.log( this.state.fileUrl );
     return (
       <div>
         <div className="row">

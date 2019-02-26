@@ -13,11 +13,6 @@ $card-border-radius: $radius-md;
   border-radius: $card-border-radius;
   border: 2px solid $card-border-color;
   display: inline-block;
-  -o-transition: $default-transition-time;
-  -ms-transition: $default-transition-time;
-  -moz-transition: $default-transition-time;
-  -webkit-transition: $default-transition-time;
-  transition: $default-transition-time;
 }
 
 .recipe-card:hover {
@@ -38,11 +33,7 @@ $card-border-radius: $radius-md;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  -o-transition: $default-transition-time;
-  -ms-transition: $default-transition-time;
-  -moz-transition: $default-transition-time;
-  -webkit-transition: $default-transition-time;
-  transition: $default-transition-time;
+
 }
 
 .recipe-card:hover h2 {

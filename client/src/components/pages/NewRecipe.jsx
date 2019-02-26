@@ -5,6 +5,8 @@ import Segment from '../elements/Segment.jsx';
 import Spacer from '../elements/Spacer.jsx';
 import TitleBox from '../elements/TitleBox.jsx';
 import ImageUpload from '../elements/ImageUpload.jsx';
+import NewRecipeIngredient from '../elements/NewRecipeIngredient.jsx';
+import NewRecipeDirection from '../elements/NewRecipeDirection.jsx';
 
 class NewRecipe extends Component {
   constructor( props ) {
@@ -80,6 +82,7 @@ class NewRecipe extends Component {
 
   onIngredientChange( e ) {
     const { currentIngredient } = this.state;
+    console.log( currentIngredient );
     currentIngredient[e.target.name] = e.target.value;
     this.setState( {
       currentIngredient,
@@ -238,11 +241,35 @@ class NewRecipe extends Component {
     this.ingredientScrollTarget.scrollIntoView( { behavior: 'smooth' } );
   }
   render() {
+    const ingredients = this.state.recipe.ingredients.map( ( ingredient, index ) => (
+      <NewRecipeIngredient
+        key={ingredient.id}
+        id={ingredient.id}
+        updateIngredient={this.updateIngredient}
+        position={index}
+        quantity={ingredient.quantity}
+        units={ingredient.units}
+        name={ingredient.name}
+      />
+    ) );
+
+    const directions = this.state.recipe.directions.map( ( direction, index ) => (
+      <NewRecipeDirection
+        key={direction.id}
+        id={direction.id}
+        position={index}
+        updateDirection={this.updateDirection}
+        description={direction.description}
+      />
+    ) );
+
     return (
       <Segment type="main-container">
         <div className="form-container new-recipe-container">
           <TitleBox />
           <Spacer size="l" />
+
+          {/* Basic Info */}
           <div className="row ">
             <div className="col-xs-12 col-md-7 evenly-spaced-col">
               <Spacer size="desktop-m" />
@@ -250,35 +277,95 @@ class NewRecipe extends Component {
                 <div className="col-xs-6"><span className="flex-center">RECIPE NAME</span></div>
                 <div className="col-xs-6"><input onChange={this.onRecipeChange} name="name" value={this.state.recipe.name} /></div>
               </div>
-
               <Spacer size="mobile-s" />
               <div className="row">
                 <div className="col-xs-6"><span className="flex-center">CATEGORY</span></div>
                 <div className="col-xs-6"><input onChange={this.onRecipeChange} name="category" value={this.state.recipe.category} /></div>
               </div>
-
               <Spacer size="mobile-s" />
-
               <div className="row">
                 <div className="col-xs-6"><span className="flex-center">DESCRIPTION</span></div>
                 <div className="col-xs-6"><input onChange={this.onRecipeChange} name="description" value={this.state.recipe.description} /></div>
               </div>
-
               <Spacer size="mobile-s" />
-
               <div className="row">
                 <div className="col-xs-6"><span className="flex-center">DURATION</span></div>
                 <div className="col-xs-6"><input type="number" onChange={this.onRecipeChange} name="duration" value={this.state.recipe.duration} /></div>
               </div>
               <Spacer size="desktop-m" />
-
             </div>
             <div className="col-xs-12 col-md-5 first-xs last-md">
-
-              <ImageUpload />
+              <ImageUpload addImage={this.addImage} editing={this.state.editing} imageUrl={this.state.imageUrl} />
               <Spacer size="mobile-l" />
             </div>
-
+          </div>
+          {/* Ingredients */}
+          <Spacer size="m" />
+          <div className="row left-align">
+            <div className="col-xs new-recipe-header">
+              <h2>INGREDIENTS</h2>
+            </div>
+          </div>
+          {ingredients}
+          <div className="row left-align">
+            <div className="col-xs-3 hidden-large">QTY</div>
+            <div className="col-xs-3 hidden-small">QUANTITY</div>
+            <div className="col-xs-3">UNITS</div>
+            <div className="col-xs-6">NAME</div>
+          </div>
+          <Spacer size="s" />
+          <div className="row">
+            <div className="col-xs-3"><input type="number" value={this.state.quantity} name="quantity" onChange={this.onIngredientChange} /></div>
+            <div className="col-xs-3"><input value={this.state.units} name="units" onChange={this.onIngredientChange} /></div>
+            <div className="col-xs-6"><input value={this.state.name} onChange={this.onIngredientChange} name="name" /></div>
+          </div>
+          <Spacer size="s" />
+          <div className="row left-align">
+            <div className="col-xs" ref={( el ) => { this.ingredientScrollTarget = el; }}>
+              <button onClick={this.addIngredient}><i className="fas fa-plus" /></button>
+            </div>
+          </div>
+          {/* Directions */}
+          <Spacer size="m" />
+          <div className="row left-align">
+            <div className="col-xs new-recipe-header">
+              <h2>DIRECTIONS</h2>
+            </div>
+          </div>
+          {directions}
+          <div className="row">
+            <div className="col-xs col-md-6">
+              <form>
+                <textarea value={this.state.description} onChange={this.onDirectionChange} name="description" />
+              </form>
+            </div>
+          </div>
+          <Spacer size="s" />
+          <div className="row left-align">
+            <div className="col-xs" ref={( el ) => { this.directionScrollTarget = el; }}>
+              <button onClick={this.addDirection}><i className="fas fa-plus" /></button>
+            </div>
+          </div>
+          {/* Notes */}
+          <Spacer size="m" />
+          <div className="row left-align">
+            <div className="col-xs new-recipe-header">
+              <h2>NOTES</h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-xs col-md-6">
+              <form>
+                <textarea value={this.state.note} onChange={this.onNoteChange} name="note" />
+              </form>
+            </div>
+          </div>
+          {/* Submit */}
+          <Spacer size="m" />
+          <div className="row left-align">
+            <div className="col-xs">
+              <button className="submit-button" onClick={this.onSubmitRecipe}><h5>Submit</h5></button>
+            </div>
           </div>
         </div>
       </Segment>
