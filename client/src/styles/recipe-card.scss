@@ -6,10 +6,13 @@ $card-border-color-hover: $theme-orange;
 $card-margin-vertical: $margin-l;
 $card-height: 25rem;
 $card-border-radius: $radius-md;
+$card-max-width: $img-width;
+$image-width: $img-width;
+$image-height: $img-height;
 
 .recipe-card {
   margin-bottom: $card-margin-vertical;
-  max-width: 300px;
+  max-width: $card-max-width;
   border-radius: $card-border-radius;
   border: 2px solid $card-border-color;
   display: inline-block;
@@ -20,6 +23,8 @@ $card-border-radius: $radius-md;
 }
 
 .recipe-card img {
+  max-height: $image-height;
+  max-width: $image-width;
   border-radius: $card-border-radius;
 }
 

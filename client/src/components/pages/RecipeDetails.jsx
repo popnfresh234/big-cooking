@@ -81,10 +81,10 @@ class RecipeDetails extends Component {
   render() {
     return (
       <div>
-        <Spacer size="l" />
-        <TitleBox />
-        <Segment padded="xxl" ignoreMobile="true" type="recipe-detail-container">
 
+        <Segment padded="xxl" ignoreMobile="true" type="recipe-detail-container">
+          <TitleBox />
+          <Spacer size="xl" />
 
           <div className="row">
             <div className="col-xs-12 col-md-2"><img className="img-recipe-detail" src={this.state.recipe.image_url} alt={this.state.recipe.name} /></div>
