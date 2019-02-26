@@ -12,13 +12,14 @@
 @import "./titlebox.scss";
 @import "./recipe-details.scss";
 @import "./recipes.scss";
+@import "./new-recipe.scss";
 
 @font-face {
   font-family: "Bell";
   src: url("./fonts/BELL.ttf");
 }
 
-*:not(body){
+*:not(i){
   -o-transition: $default-transition-time;
   -ms-transition: $default-transition-time;
   -moz-transition: $default-transition-time;
@@ -33,7 +34,7 @@
 body {
   text-align: center;
 }
-.row{
+.row {
   margin-left: 0;
   margin-right: 0;
 }
@@ -42,8 +43,8 @@ body {
   max-width: 4%;
 }
 
-.col-md-mini{
-  flex-basis:4%;
+.col-md-mini {
+  flex-basis: 4%;
   max-width: 4%;
 }
 
@@ -54,6 +55,12 @@ body {
   justify-content: center;
   overflow: hidden;
   overflow-wrap: break-word;
+}
+
+.evenly-spaced-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .align-center {
@@ -79,7 +86,11 @@ div {
   text-align: right;
 }
 
-.mobile-center{
+.center {
+  text-align: center;
+}
+
+.mobile-center {
   text-align: center;
 }
 

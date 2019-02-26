@@ -1,4 +1,5 @@
 $default-transition-time: 0.2s;
+$image-width: 300px;
 
 $grey-darker: hsl(0, 0%, 21%) !default;
 $grey-dark: hsl(0, 0%, 29%) !default;
@@ -14,6 +15,10 @@ $theme-green: #b1d8b9;
 $bg-color: #ffffe0;
 $login-color: $grey-darker;
 $border-color: $grey-light;
+
+$button-width: 3rem;
+$button-width-xl: 8rem;
+$button-height-xl: 3.5rem;
 
 $margin-xxl: 8rem;
 $margin-xl: 4rem;

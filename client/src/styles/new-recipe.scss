@@ -1,0 +1,40 @@
+$new-recipe-image-width: $image-width;
+$row-margin-vertical: $margin-s;
+$recipe-header-margin-vertical: $margin-s;
+
+.img-new-recipe {
+    width: $new-recipe-image-width;
+  }
+
+.input-new-recipe-img{
+    width: $new-recipe-image-width;
+    display: inline-block;
+}
+
+.row-new-item{
+  margin-bottom: $row-margin-vertical
+}
+
+
+.hidden-small{
+  display: none;
+}
+
+.hidden-large{
+  display: block;
+}
+
+.new-recipe-header{
+  margin-bottom: $recipe-header-margin-vertical;
+}
+
+@media only screen and (min-width: 64em) {
+
+  .hidden-small{
+    display: block;
+  }
+
+  .hidden-large{
+    display: none;
+  }
+}

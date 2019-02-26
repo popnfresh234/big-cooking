@@ -6,17 +6,30 @@ $button-bg-color: $theme-green;
 $button-hover-bg-color: $theme-orange;
 $button-radius: $radius-s;
 $edit-buttons-margin-vertical: $margin-m;
+$button-min-width: $button-width;
+$submit-button-width: $button-width-xl;
+$submit-button-height: $button-height-xl;
+
 button {
   color: $button-color;
   background: $button-bg-color;
   border: 1px solid $border-color;
   border-radius: $button-radius;
   padding: $button-padding;
-  -o-transition: $default-transition-time;
-  -ms-transition: $default-transition-time;
-  -moz-transition: $default-transition-time;
-  -webkit-transition: $default-transition-time;
-  transition: $default-transition-time;
+  min-width: $button-min-width;
+}
+
+.submit-button{
+  width: $submit-button-width;
+  height: $submit-button-height;
+}
+
+.submit-button h5 {
+  color: $button-color;
+}
+
+.submit-button:hover h5 {
+  color: $button-hover-color;
 }
 
 .delete {

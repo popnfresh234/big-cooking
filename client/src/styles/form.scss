@@ -4,21 +4,11 @@ $input-margin-top: $margin-xxs;
 $input-padding: $padding-s;
 $label-margin-top: $margin-m;
 $button-margin-top: $margin-m;
-$form-margin-horizontal: $margin-m;
 
-.form-container {
-  margin: 0 $form-margin-horizontal;
-  max-width: 95vw;
-}
 
-@media only screen and (min-width: 64em) {
-  .form-container {
-    margin: 0 auto;
-    max-width: 33vw;
-  }
-}
 
-input {
+
+input, textarea {
   border: 1px solid $border-color;
   border-radius: $input-radius;
   color: $input-color;
@@ -28,7 +18,7 @@ input {
   padding: $input-padding;
 }
 
-input:focus{
+input:focus, textarea:focus{
   outline-style: auto; 
   outline-color: $theme-orange;
 }
