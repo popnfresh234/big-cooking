@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import { NavLink, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import Ingredient from '../elements/Ingredient.jsx';
 import Direction from '../elements/Direction.jsx';
 import TitleBox from '../elements/TitleBox.jsx';
 import Spacer from '../elements/Spacer.jsx';
 import Segment from '../elements/Segment.jsx';
-import { NavLink, Redirect } from 'react-router-dom';
 
 
 class RecipeDetails extends Component {
@@ -14,9 +14,11 @@ class RecipeDetails extends Component {
     this.state = {
       recipe: '',
       deleted: false,
+      showModal: false,
     };
     this.onQuantityChange = this.onQuantityChange.bind( this );
     this.onDelete = this.onDelete.bind( this );
+    this.toggleModal = this.toggleModal.bind( this );
   }
 
   componentDidMount() {
@@ -44,6 +46,7 @@ class RecipeDetails extends Component {
       } );
   }
 
+
   onQuantityChange( origValue, e ) {
     let multiplier = e.target.value / origValue;
     if ( multiplier <= 0 ) multiplier = 1;
@@ -65,6 +68,10 @@ class RecipeDetails extends Component {
       } );
   }
 
+  toggleModal() {
+    this.setState( { showModal: !this.state.showModal } );
+  }
+
   calcIngredients( ingredients, multiplier ) {
     return ingredients
       .map( ingredient => ( <Ingredient
@@ -83,6 +90,7 @@ class RecipeDetails extends Component {
       <div>
 
         <Segment type="main-container">
+          {this.state.deleted && <Redirect to="/recipes" />}
           <TitleBox />
           <Spacer size="xl" />
           <div className="row">
@@ -94,7 +102,7 @@ class RecipeDetails extends Component {
                 <div className="col-xs-6 col-md mobile-center">
                   <NavLink to={`/edit-recipe/${this.props.computedMatch.params.id}`} className="flex-center align-center"><button className="edit-buttons edit">EDIT</button></NavLink>
                 </div>
-                <div className="col-xs-6 col-md mobile-center"><div className="flex-center align-center"><button className="edit-buttons delete">DELETE</button></div></div>
+                <div className="col-xs-6 col-md mobile-center"><div className="flex-center align-center"><button className="edit-buttons delete" onClick={this.toggleModal}>DELETE</button></div></div>
               </div>
               <Spacer size="m" />
               <div className="row left-align">
