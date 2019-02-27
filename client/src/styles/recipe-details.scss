@@ -1,13 +1,8 @@
 $image-border-radius: $radius-md;
+$image-recipe-detail: $image-width;
 
-@media only screen and (min-width: 64em) {
-  .img-recipe-detail {
-    width: 100%;
-  }
-
-  .left-margin{
-    margin-left: $margin-m;
-  }
+.img-recipe-detail {
+  width: $image-recipe-detail;
 }
 
 .direction-item{
@@ -26,4 +21,14 @@ $image-border-radius: $radius-md;
 
 .recipe-detail-container img {
   border-radius: $image-border-radius;
+}
+
+@media only screen and (min-width: 64em) {
+  .img-recipe-detail {
+    width: 100%;
+  }
+
+  .left-margin{
+    margin-left: $margin-m;
+  }
 }
