@@ -13,6 +13,7 @@
 @import "./recipe-details.scss";
 @import "./recipes.scss";
 @import "./new-recipe.scss";
+@import "./delete-modal.scss";
 
 @font-face {
   font-family: "Bell";
@@ -71,6 +72,10 @@ body {
   min-height: 100vh;
   background-color: $bg-color;
   padding-bottom: 1rem;
+}
+
+.test{
+  flex-basis: auto;
 }
 
 div {

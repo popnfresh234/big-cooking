@@ -6,6 +6,7 @@ import Direction from '../elements/Direction.jsx';
 import TitleBox from '../elements/TitleBox.jsx';
 import Spacer from '../elements/Spacer.jsx';
 import Segment from '../elements/Segment.jsx';
+import DeleteModal from '../elements/DeleteModal.jsx';
 
 
 class RecipeDetails extends Component {
@@ -88,7 +89,7 @@ class RecipeDetails extends Component {
   render() {
     return (
       <div>
-
+        <DeleteModal show={this.state.showModal} toggleModal={this.toggleModal} onDelete={this.onDelete} />
         <Segment type="main-container">
           {this.state.deleted && <Redirect to="/recipes" />}
           <TitleBox />

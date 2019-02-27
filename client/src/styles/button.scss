@@ -6,9 +6,12 @@ $button-bg-color: $theme-green;
 $button-hover-bg-color: $theme-orange;
 $button-radius: $radius-s;
 $edit-buttons-margin-vertical: $margin-m;
+$modal-button-margin-vertical: $margin-m;
+$modal-button-margin-horizontal: $margin-m;
 $button-min-width: $button-width;
 $submit-button-width: $button-width-xl;
 $submit-button-height: $button-height-xl;
+$delete-button-width: $button-width-l;
 
 button {
   color: $button-color;
@@ -45,6 +48,11 @@ button {
 .edit-buttons {
   margin: $edit-buttons-margin-vertical 0 $edit-buttons-margin-vertical 0;
   width: $edit-button-width;
+}
+
+.modal-button{
+  width: $delete-button-width;
+  margin: $modal-button-margin-vertical $modal-button-margin-horizontal;
 }
 
 @media only screen and (min-width: 64em) {

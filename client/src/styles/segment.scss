@@ -14,6 +14,12 @@ $container-padding-horizontal: $padding-m;
 $container-padding-vertical-desktop: $padding-xl;
 $container-padding-horizontal-desktop: $padding-xxl;
 
+$modal-padding-horizontal: $padding-s;
+$modal-padding-vertical: $padding-s;
+
+$modal-padding-horizontal-desktop: $padding-xxl;
+$modal-padding-vertical-desktop: $padding-xxl;
+
 $form-container-margin-horizontal: $margin-m;
 
 .segment {
@@ -60,10 +66,20 @@ $form-container-margin-horizontal: $margin-m;
   background-color: $container-color;
 }
 
-
 .form-container {
   margin: 0 $form-container-margin-horizontal;
   max-width: 95vw;
+}
+
+.modal-container {
+    position:fixed;
+    padding: $modal-padding-vertical $modal-padding-horizontal;
+    background: white;
+    width: 80%;
+    height: auto;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
 
 @media only screen and (min-width: 64em) {
@@ -79,5 +95,10 @@ $form-container-margin-horizontal: $margin-m;
 
   .new-recipe-container {
     max-width: 66vw;
+  }
+
+  .modal-container {
+    width: 25%;
+    padding: $modal-padding-vertical-desktop $modal-padding-horizontal-desktop;
   }
 }
