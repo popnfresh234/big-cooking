@@ -18,7 +18,6 @@ class App extends Component {
       userId: '',
       userName: '',
       loading: false,
-      blurred: false,
     };
     this.handleAuthState = this.handleAuthState.bind( this );
     this.handleLoading = this.handleLoading.bind( this );
@@ -52,10 +51,8 @@ class App extends Component {
 
 
   render() {
-    console.log( this.state.blurred );
-    const contentClassName = this.state.blurred ? 'content blurred' : 'content';
     return (
-      <div className={contentClassName}>
+      <div className="content">
         <Navbar
           isLoggedIn={this.state.isLoggedIn}
           handleAuthState={this.handleAuthState}
