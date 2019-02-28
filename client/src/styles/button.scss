@@ -22,7 +22,7 @@ button {
   min-width: $button-min-width;
 }
 
-.submit-button{
+.submit-button {
   width: $submit-button-width;
   height: $submit-button-height;
 }
@@ -40,7 +40,12 @@ button {
   background-color: $theme-red;
 }
 
-.delete:hover{
+.delete:hover {
+  color: $theme-red;
+  background-color: $theme-white-text;
+}
+
+.delete:focus {
   color: $theme-red;
   background-color: $theme-white-text;
 }
@@ -50,7 +55,7 @@ button {
   width: $edit-button-width;
 }
 
-.modal-button{
+.modal-button {
   width: $delete-button-width;
   margin: $modal-button-margin-vertical $modal-button-margin-horizontal;
 }
