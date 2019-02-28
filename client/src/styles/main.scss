@@ -20,7 +20,7 @@
   src: url("./fonts/BELL.ttf");
 }
 
-*:not(i){
+*:not(i) {
   -o-transition: $default-transition-time;
   -ms-transition: $default-transition-time;
   -moz-transition: $default-transition-time;
@@ -74,8 +74,8 @@ body {
   padding-bottom: 1rem;
 }
 
-.test{
-  flex-basis: auto;
+.blurred {
+  filter: blur(5px);
 }
 
 div {

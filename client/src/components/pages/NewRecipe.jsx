@@ -262,7 +262,6 @@ class NewRecipe extends Component {
         description={direction.description}
       />
     ) );
-    console.log( this.props.isLoggedIn );
     return (
       <Segment type="main-container">
         {this.state.submitted && <Redirect to="/recipes" />}
