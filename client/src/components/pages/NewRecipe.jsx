@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import uuidv1 from 'uuid/v1';
 import axios from 'axios';
 import Segment from '../elements/Segment.jsx';
@@ -82,7 +83,6 @@ class NewRecipe extends Component {
 
   onIngredientChange( e ) {
     const { currentIngredient } = this.state;
-    console.log( currentIngredient );
     currentIngredient[e.target.name] = e.target.value;
     this.setState( {
       currentIngredient,
@@ -262,9 +262,10 @@ class NewRecipe extends Component {
         description={direction.description}
       />
     ) );
-
+    console.log( this.props.isLoggedIn );
     return (
       <Segment type="main-container">
+        {this.state.submitted && <Redirect to="/recipes" />}
         <div className="form-container new-recipe-container">
           <TitleBox />
           <Spacer size="l" />
@@ -299,6 +300,7 @@ class NewRecipe extends Component {
               <Spacer size="mobile-l" />
             </div>
           </div>
+
           {/* Ingredients */}
           <Spacer size="m" />
           <div className="row left-align">
@@ -325,6 +327,7 @@ class NewRecipe extends Component {
               <button onClick={this.addIngredient}><i className="fas fa-plus" /></button>
             </div>
           </div>
+
           {/* Directions */}
           <Spacer size="m" />
           <div className="row left-align">
@@ -346,6 +349,7 @@ class NewRecipe extends Component {
               <button onClick={this.addDirection}><i className="fas fa-plus" /></button>
             </div>
           </div>
+
           {/* Notes */}
           <Spacer size="m" />
           <div className="row left-align">
@@ -360,6 +364,7 @@ class NewRecipe extends Component {
               </form>
             </div>
           </div>
+
           {/* Submit */}
           <Spacer size="m" />
           <div className="row left-align">
