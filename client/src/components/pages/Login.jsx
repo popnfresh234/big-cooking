@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Segment from '../elements/Segment.jsx';
 import TitleBox from '../elements/TitleBox.jsx';
 import Spacer from '../elements/Spacer.jsx';
+import Input from '../elements/Input.jsx';
 
 class Login extends Component {
   constructor( props ) {
@@ -51,14 +52,14 @@ class Login extends Component {
               <div className="form-input">
                 <label htmlFor="email">
                   <span>E-mail <span className="required">*</span></span>
-                  <input placeholder="E-mail" name="email" type="email" onChange={this.onChange} required />
+                  <input placeholder="E-mail" name="email" type="email" onChange={this.onChange} />
                 </label>
               </div>
 
               <div className="form-input">
                 <label htmlFor="password">
                   <span>Password <span className="required">*</span></span>
-                  <input placeholder="Password" name="password" type="password" onChange={this.onChange} required />
+                  <input placeholder="Password" name="password" type="password" onChange={this.onChange} />
                 </label>
               </div>
               <button type="submit">Sign in!</button>

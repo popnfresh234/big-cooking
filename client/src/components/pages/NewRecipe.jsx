@@ -8,6 +8,7 @@ import TitleBox from '../elements/TitleBox.jsx';
 import ImageUpload from '../elements/ImageUpload.jsx';
 import NewRecipeIngredient from '../elements/NewRecipeIngredient.jsx';
 import NewRecipeDirection from '../elements/NewRecipeDirection.jsx';
+import Input from '../elements/Input.jsx';
 
 class NewRecipe extends Component {
   constructor( props ) {
@@ -275,22 +276,47 @@ class NewRecipe extends Component {
               <Spacer size="desktop-m" />
               <div className="row">
                 <div className="col-xs-6"><span className="flex-center">RECIPE NAME</span></div>
-                <div className="col-xs-6"><input onChange={this.onRecipeChange} name="name" value={this.state.recipe.name} /></div>
+                <div className="col-xs-6"><Input
+                  onChange={this.onRecipeChange}
+                  name="name"
+                  value={this.state.recipe.name}
+                  filled={this.state.recipe.name}
+                />
+                </div>
               </div>
               <Spacer size="mobile-s" />
               <div className="row">
                 <div className="col-xs-6"><span className="flex-center">CATEGORY</span></div>
-                <div className="col-xs-6"><input onChange={this.onRecipeChange} name="category" value={this.state.recipe.category} /></div>
+                <div className="col-xs-6"><Input
+                  onChange={this.onRecipeChange}
+                  name="category"
+                  value={this.state.recipe.category}
+                  filled={this.state.recipe.category}
+                />
+                </div>
               </div>
               <Spacer size="mobile-s" />
               <div className="row">
                 <div className="col-xs-6"><span className="flex-center">DESCRIPTION</span></div>
-                <div className="col-xs-6"><input onChange={this.onRecipeChange} name="description" value={this.state.recipe.description} /></div>
+                <div className="col-xs-6"><Input
+                  onChange={this.onRecipeChange}
+                  name="description"
+                  value={this.state.recipe.description}
+                  filled={this.state.recipe.description}
+                />
+                </div>
               </div>
               <Spacer size="mobile-s" />
               <div className="row">
                 <div className="col-xs-6"><span className="flex-center">DURATION</span></div>
-                <div className="col-xs-6"><input type="number" onChange={this.onRecipeChange} name="duration" value={this.state.recipe.duration} /></div>
+                <div className="col-xs-6"><Input
+                  type="number"
+                  onChange={this.onRecipeChange}
+                  name="duration"
+                  value={this.state.recipe.duration}
+                  filled={this.state.recipe.duration}
+                />
+                </div>
               </div>
               <Spacer size="desktop-m" />
             </div>
@@ -316,9 +342,9 @@ class NewRecipe extends Component {
           </div>
           <Spacer size="s" />
           <div className="row">
-            <div className="col-xs-3"><input type="number" value={this.state.quantity} name="quantity" onChange={this.onIngredientChange} /></div>
-            <div className="col-xs-3"><input value={this.state.units} name="units" onChange={this.onIngredientChange} /></div>
-            <div className="col-xs-6"><input value={this.state.name} onChange={this.onIngredientChange} name="name" /></div>
+            <div className="col-xs-3"><Input type="number" value={this.state.quantity} name="quantity" onChange={this.onIngredientChange} filled={this.state.recipe.ingredients.length} /></div>
+            <div className="col-xs-3"><Input value={this.state.units} name="units" onChange={this.onIngredientChange} filled={this.state.recipe.ingredients.length} /></div>
+            <div className="col-xs-6"><Input value={this.state.name} onChange={this.onIngredientChange} name="name" filled={this.state.recipe.ingredients.length} /></div>
           </div>
           <Spacer size="s" />
           <div className="row left-align">
@@ -338,7 +364,7 @@ class NewRecipe extends Component {
           <div className="row">
             <div className="col-xs col-md-6">
               <form>
-                <textarea value={this.state.description} onChange={this.onDirectionChange} name="description" />
+                <Input type="textarea" value={this.state.description} onChange={this.onDirectionChange} name="description" filled={this.state.recipe.directions.length} />
               </form>
             </div>
           </div>
@@ -359,7 +385,7 @@ class NewRecipe extends Component {
           <div className="row">
             <div className="col-xs col-md-6">
               <form>
-                <textarea value={this.state.note} onChange={this.onNoteChange} name="note" />
+                <textarea value={this.state.note} onChange={this.onNoteChange} name="note" placeholder="Optional notes" />
               </form>
             </div>
           </div>
