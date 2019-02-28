@@ -79,7 +79,6 @@ class App extends Component {
       id,
       showModal: !this.state.showModal,
     } );
-    // this.handleDelete( id );
   }
 
 
@@ -153,7 +152,6 @@ class App extends Component {
               handleLoading={this.handleLoading}
               toggleModal={this.toggleModal}
               deleted={this.state.deleted}
-              handleDelete={this.handleDelete}
               component={RecipeDetails}
             />
             <PrivateRoute

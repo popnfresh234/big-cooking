@@ -13,7 +13,6 @@ class RecipeDetails extends Component {
     super( props );
     this.state = {
       recipe: '',
-      deleted: false,
     };
     this.onQuantityChange = this.onQuantityChange.bind( this );
     this.onDelete = this.onDelete.bind( this );
