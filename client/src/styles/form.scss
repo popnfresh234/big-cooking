@@ -5,7 +5,8 @@ $input-padding: $padding-s;
 $label-margin-top: $margin-m;
 $button-margin-top: $margin-m;
 
-
+$input-error-bg-color: $theme-input-error;
+$input-error-border-color: $theme-red;
 
 
 input, textarea {
@@ -16,6 +17,16 @@ input, textarea {
   display: block;
   box-sizing: border-box;
   padding: $input-padding;
+}
+
+.input-error{
+  border: 1px solid $input-error-border-color;
+  background-color: $input-error-bg-color;
+}
+
+.input-error:focus{
+  border: 1px solid $border-color;
+  background-color: white;
 }
 
 input:focus, textarea:focus{
