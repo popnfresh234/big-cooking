@@ -342,9 +342,9 @@ class NewRecipe extends Component {
           </div>
           <Spacer size="s" />
           <div className="row">
-            <div className="col-xs-3"><input type="number" value={this.state.quantity} name="quantity" onChange={this.onIngredientChange} /></div>
-            <div className="col-xs-3"><input value={this.state.units} name="units" onChange={this.onIngredientChange} /></div>
-            <div className="col-xs-6"><input value={this.state.name} onChange={this.onIngredientChange} name="name" /></div>
+            <div className="col-xs-3"><Input type="number" value={this.state.quantity} name="quantity" onChange={this.onIngredientChange} filled={this.state.recipe.ingredients.length} /></div>
+            <div className="col-xs-3"><Input value={this.state.units} name="units" onChange={this.onIngredientChange} filled={this.state.recipe.ingredients.length} /></div>
+            <div className="col-xs-6"><Input value={this.state.name} onChange={this.onIngredientChange} name="name" filled={this.state.recipe.ingredients.length} /></div>
           </div>
           <Spacer size="s" />
           <div className="row left-align">
@@ -364,7 +364,7 @@ class NewRecipe extends Component {
           <div className="row">
             <div className="col-xs col-md-6">
               <form>
-                <textarea value={this.state.description} onChange={this.onDirectionChange} name="description" />
+                <Input type="textarea" value={this.state.description} onChange={this.onDirectionChange} name="description" filled={this.state.recipe.directions.length} />
               </form>
             </div>
           </div>
@@ -385,7 +385,7 @@ class NewRecipe extends Component {
           <div className="row">
             <div className="col-xs col-md-6">
               <form>
-                <textarea value={this.state.note} onChange={this.onNoteChange} name="note" />
+                <textarea value={this.state.note} onChange={this.onNoteChange} name="note" placeholder="Optional notes" />
               </form>
             </div>
           </div>

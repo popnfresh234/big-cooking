@@ -8,8 +8,8 @@ $button-margin-top: $margin-m;
 $input-error-bg-color: $theme-input-error;
 $input-error-border-color: $theme-red;
 
-
-input, textarea {
+input,
+textarea {
   border: 1px solid $border-color;
   border-radius: $input-radius;
   color: $input-color;
@@ -19,20 +19,22 @@ input, textarea {
   padding: $input-padding;
 }
 
-.input-error{
+.input-error {
   border: 1px solid $input-error-border-color;
   background-color: $input-error-bg-color;
 }
 
-.input-error:focus{
-  border: 1px solid $border-color;
-  background-color: white;
-}
-
-input:focus, textarea:focus{
-  outline-style: auto; 
+input:focus,
+textarea:focus {
+  outline-style: auto;
   outline-color: $theme-orange;
 }
+
+input[class^="input-error"]:focus, textarea[class^="input-error"]:focus {
+outline-color: $input-error-border-color;
+background-color: white;
+}
+
 
 label {
   display: block;
