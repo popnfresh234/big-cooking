@@ -9,6 +9,7 @@ $card-border-radius: $radius-md;
 $card-max-width: $img-width;
 $image-width: $img-width;
 $image-height: $img-height;
+$image-width-mobile: 250px;
 
 .recipe-card {
   margin-bottom: $card-margin-vertical;
@@ -69,7 +70,7 @@ $image-height: $img-height;
 .placeholder {
   box-sizing: border-box;
   margin-bottom: $card-margin-vertical;
-  width: 300px;
+  width: $image-width;
   height: $card-height;
 }
 
@@ -80,6 +81,24 @@ $image-height: $img-height;
 .placeholder h2 {
   color: $grey;
 }
+
+@media only screen and (max-width: 320px) {
+  .placeholder {
+    width: $image-width-mobile;
+  }
+
+  .recipe-card{
+    width: $image-width-mobile;
+
+  }
+
+  .recipe-card img {
+    width: $image-width-mobile;
+    height: $image-width-mobile;
+  }
+
+}
+
 
 @media only screen and (min-width: 64em) {
   .recipe-card{

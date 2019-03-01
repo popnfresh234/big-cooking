@@ -15,9 +15,13 @@
 @import "./new-recipe.scss";
 @import "./delete-modal.scss";
 
-@font-face {
-  font-family: "Bell";
-  src: url("./fonts/BELL.ttf");
+@font-face {font-family: "Bell MT Regular";
+  src: url("./fonts/01661f50354ecd0a3560ac450ecf43d3.eot"); /* IE9*/
+  src: url("./fonts/01661f50354ecd0a3560ac450ecf43d3.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("./fonts/01661f50354ecd0a3560ac450ecf43d3.woff2") format("woff2"), /* chrome、firefox */
+  url("./fonts/01661f50354ecd0a3560ac450ecf43d3.woff") format("woff"), /* chrome、firefox */
+  url("./fonts/01661f50354ecd0a3560ac450ecf43d3.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("./fonts/01661f50354ecd0a3560ac450ecf43d3.svg#Bell MT Regular") format("svg"); /* iOS 4.1- */
 }
 
 *:not(i) {
