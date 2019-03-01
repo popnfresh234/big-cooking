@@ -20,6 +20,7 @@
     "express-fileupload": "^1.1.1-alpha.3",
     "knex": "^0.16.3",
     "morgan": "^1.9.1",
+    "newrelic": "^5.5.0",
     "pg": "^7.8.0"
   },
   "devDependencies": {
