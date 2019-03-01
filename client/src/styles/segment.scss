@@ -64,6 +64,8 @@ $form-container-margin-horizontal: $margin-m;
   margin: $container-margin-vertical $container-margin-horizontal 0 $container-margin-horizontal;
   padding: $container-padding-vertical $container-padding-horizontal;
   background-color: $container-color;
+  box-shadow: 2px 2px $grey-light;
+
 }
 
 .form-container {
