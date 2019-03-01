@@ -132,6 +132,7 @@ function handleRecipe( req, res, fn ) {
 router.get( '/', ( req, res, next ) => {
   knex.select()
     .from( 'recipes' )
+    .orderBy( 'name' )
     .then( ( result ) => {
       if ( result.length ) {
         res.status( 200 ).json( result );
@@ -175,6 +176,7 @@ router.get( '/search', ( req, res, next ) => {
     .from( 'recipes' )
     .where( 'name', 'ilike', `%${query}%` )
     .orWhere( 'description', 'ilike', `%${query}%` )
+    .orderBy( 'name' )
     .then( ( results ) => {
       res.send( results );
     } )
