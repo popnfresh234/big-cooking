@@ -70,10 +70,7 @@ class Recipes extends Component {
     return (
       <Segment padded="xxl-ignore-mobile" type="main-container">
         <TitleBox />
-        <Spacer size="xl" />
-
         {this.state.recipes}
-
       </Segment>
     );
   }

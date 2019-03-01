@@ -52,7 +52,6 @@ class Register extends Component {
       <Segment className="main-container">
         <div className="form-container">
           <TitleBox />
-          <Spacer size="l" />
           <Segment padded="l" color="grey-darker">
             <form onSubmit={this.onSubmit}>
               {this.state.error && <p>{this.state.error}</p>}

@@ -53,6 +53,8 @@
   $margin-bottom: $margin-l;
 }
 
+
+
 @media only screen and (min-width: 64em) {
   .size-mobile-m {
     margin-top: 0;
@@ -71,5 +73,10 @@
   .size-desktop-m{
     margin-top: $margin-m;
     margin-bottom: $margin-m;
+  }
+
+  .size-desktop-l{
+    margin-top: $margin-l;
+    margin-bottom: $margin-l;
   }
 }
