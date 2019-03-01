@@ -67,6 +67,7 @@ $image-height: $img-height;
 }
 
 .placeholder {
+  box-sizing: border-box;
   margin-bottom: $card-margin-vertical;
   width: 300px;
   height: $card-height;

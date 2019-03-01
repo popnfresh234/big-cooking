@@ -10,6 +10,7 @@ $logo-padding-horizontal: $padding-xs;
 
 .title-sub-header {
   font-style: italic;
+  font-size: $font-tiny;
 }
 
 
@@ -27,8 +28,13 @@ $logo-padding-horizontal: $padding-xs;
   }
 
   .logo {
-
     line-height: $logo-height-desktop;
     height: $logo-height-desktop !important;
   }
+
+  .title-sub-header {
+    font-style: italic;
+    font-size: $font-s;
+  }
+  
 }

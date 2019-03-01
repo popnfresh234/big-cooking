@@ -40,14 +40,10 @@ body {
   margin-right: 0;
 }
 .col-xs-mini {
-  flex-basis: 4%;
-  max-width: 4%;
+  flex-basis: 5%;
+  max-width: 5%;
 }
 
-.col-md-mini {
-  flex-basis: 4%;
-  max-width: 4%;
-}
 
 .flex-center {
   height: 100%;
@@ -104,7 +100,18 @@ div {
   outline-style: none;
 }
 
+@media only screen and (max-width: 48em) {
+  .no-padding-mobile{
+    padding: 0;
+  }
+}
+
 @media only screen and (min-width: 64em) {
+  .col-md-mini {
+    flex-basis: 2%;
+    max-width: 2%;
+  }
+  
   .nav-item-spacer {
     display: block;
   }
