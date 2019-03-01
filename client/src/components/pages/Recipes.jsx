@@ -49,9 +49,9 @@ class Recipes extends Component {
                   {
                     recipeArray.map( ( recipe ) => {
                       if ( recipe.placeholder ) {
-                        return <div key={recipe.id} className={`col-xs-12 col-md-${this.props.cardsPerRow}`}><RecipeCardPlaceholder /></div>;
+                        return <div key={recipe.id} className={`col-xs-12 col-md-${this.props.cardsPerRow} no-padding-mobile`}><RecipeCardPlaceholder /></div>;
                       }
-                        return <div key={recipe.id} className={`col-xs-12 col-md-${this.props.cardsPerRow}`}><RecipeCard recipe={recipe} /></div>;
+                        return <div key={recipe.id} className={`col-xs-12 col-md-${this.props.cardsPerRow} no-padding-mobile`}><RecipeCard recipe={recipe} /></div>;
                     } )
                     }
                 </div>
