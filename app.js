@@ -8,8 +8,6 @@ const cookieSession = require( 'cookie-session' );
 const logger = require( 'morgan' );
 const indexRouter = require( './routes/index' );
 const recipesRouter = require( './routes/recipes' );
-require( 'newrelic' );
-
 
 const app = express();
 
