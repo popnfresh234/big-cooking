@@ -28,10 +28,7 @@ app.use( express.static( path.join( __dirname, 'public' ) ) );
 app.use( cookieSession( {
   name: 'session',
   secret: 'secret',
-  expires: true,
-  maxAge: 5000,
-  // maxAge: 24 * 60 * 60 * 1000,
-  // maxAge: 24 * 60 * 60 * 1000,
+  maxAge: 24 * 60 * 60 * 1000,
 } ) );
 
 // Catch all route redirects to index.html so react router can take over
