@@ -81,7 +81,9 @@ class App extends Component {
     } );
   }
 
-
+  componentWillUnmount() {
+    console.log( 'exiting' );
+  }
   render() {
     const contentClassName = this.state.showModal ? 'content blurred' : 'content';
     return (
@@ -103,6 +105,8 @@ class App extends Component {
                 key="random"
                 cardsPerRow={12 / 3}
                 userId={this.state.userId}
+                handleLoading={this.handleLoading}
+                handleAuthState={this.handleAuthState}
               /> )}
             />
             <Route
@@ -115,6 +119,7 @@ class App extends Component {
                 key="recipes"
                 cardsPerRow={12 / 4}
                 handleLoading={this.handleLoading}
+                handleAuthState={this.handleAuthState}
               /> )}
             />
             <PrivateRoute
@@ -141,18 +146,21 @@ class App extends Component {
               handleLoading={this.handleLoading}
               component={Recipes}
             />
-            <PrivateRoute
+            <Route
               path="/recipe-details/:id"
               exact
-              isLoggedIn={this.state.isLoggedIn}
-              rootPath="recipe-details"
-              userId={this.state.userId}
-              key="recipe-details"
-              handleAuthState={this.handleAuthState}
-              handleLoading={this.handleLoading}
-              toggleModal={this.toggleModal}
-              deleted={this.state.deleted}
-              component={RecipeDetails}
+              render={props =>
+                ( <RecipeDetails
+                  {...props}
+                  isLoggedIn={this.state.isLoggedIn}
+                  rootPath="recipe-details"
+                  userId={this.state.userId}
+                  key="recipe-details"
+                  handleAuthState={this.handleAuthState}
+                  handleLoading={this.handleLoading}
+                  toggleModal={this.toggleModal}
+                  deleted={this.state.deleted}
+                /> )}
             />
             <PrivateRoute
               path="/new-recipe"

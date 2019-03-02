@@ -20,7 +20,7 @@ class RecipeDetails extends Component {
 
   componentDidMount() {
     this.props.handleLoading();
-    axios.get( `/api/recipes/${this.props.computedMatch.params.id}` )
+    axios.get( `/api/recipes/${this.props.match.params.id}` )
       .then( ( result ) => {
         this.props.handleLoading();
         const ingredients = this.calcIngredients( result.data.ingredients, 1 );
@@ -52,7 +52,7 @@ class RecipeDetails extends Component {
   }
 
   onDelete() {
-    this.props.toggleModal( this.props.computedMatch.params.id );
+    this.props.toggleModal( this.props.match.params.id );
   }
 
 
@@ -81,10 +81,14 @@ class RecipeDetails extends Component {
               <Spacer size="mobile-m" />
               <div className="row left-align">
                 <div className="col-xs-12 col-md-8"><h1>{this.state.recipe.name ? this.state.recipe.name.toUpperCase() : ''}</h1></div>
-                <div className="col-xs-6 col-md mobile-center">
-                  <NavLink to={`/edit-recipe/${this.props.computedMatch.params.id}`} className="flex-center align-center"><button className="edit-buttons edit">EDIT</button></NavLink>
-                </div>
-                <div className="col-xs-6 col-md mobile-center"><div className="flex-center align-center"><button className="edit-buttons delete" onClick={this.onDelete}>DELETE</button></div></div>
+                {this.state.recipe.user_id === this.props.userId &&
+                  <div className="col-xs-6 col-md mobile-center">
+                    <NavLink to={`/edit-recipe/${this.props.match.params.id}`} className="flex-center align-center"><button className="edit-buttons edit">EDIT</button></NavLink>
+                  </div>
+                }
+                {this.state.recipe.user_id === this.props.userId &&
+                  <div className="col-xs-6 col-md mobile-center"><div className="flex-center align-center"><button className="edit-buttons delete" onClick={this.onDelete}>DELETE</button></div></div>
+                }
               </div>
               <Spacer size="m" />
               <div className="row left-align">
