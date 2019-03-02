@@ -1,5 +1,6 @@
 $image-border-radius: $radius-md;
 $image-recipe-detail: $image-width;
+$image-width-mobile: $img-width-small;
 
 .img-recipe-detail {
   width: $image-recipe-detail;
@@ -21,6 +22,12 @@ $image-recipe-detail: $image-width;
 
 .recipe-detail-container img {
   border-radius: $image-border-radius;
+}
+
+@media only screen and (max-width: 320px) {
+  .img-recipe-detail{
+    width: $image-width-mobile;
+  }
 }
 
 @media only screen and (min-width: 64em) {

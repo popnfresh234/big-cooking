@@ -9,7 +9,7 @@ $card-border-radius: $radius-md;
 $card-max-width: $img-width;
 $image-width: $img-width;
 $image-height: $img-height;
-$image-width-mobile: 250px;
+$image-width-mobile: $img-width-small;
 
 .recipe-card {
   margin-bottom: $card-margin-vertical;
